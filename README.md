@@ -1,4 +1,4 @@
-# Scalable rollfilm back - 6x9...6x17 
+# Scalable rollfilm back - 6x9...6x24 
 
 _This is my attempt to create a scalable large format field camera design._
 
