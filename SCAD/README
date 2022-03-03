@@ -1,3 +1,5 @@
+CAUTION: currently there are only the files for the scalable field camera.
+
 Some hints about the scripting and according conventions in here - as my OpenSCAD scripting is learning by doing, some constructs may look crude or even violate best practice.
 I am using some rules and conventions to make my scripting as consistent, readable and maintainable as possible.
 
