@@ -7,6 +7,7 @@ Don't expect a full and working set of parts until release 1.0.
 Preparation:
 
 1.) Please make sure to install a fairly new version of OpenSCAD - versions 2021.01 or above are recommended and should be available for all common OS platforms.
+
 2.) Please make sure to pull and install the following modules/libraries:
 
 https://danielupshaw.com/openscad-rounded-corners/
