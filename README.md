@@ -1,6 +1,7 @@
 # Scalable rollfilm back - 6x9...6x24 
 
 _This is my attempt to create a scalable large format field camera design._
+_For now I am re-engineering my old 6x12 TinkerCAD-design, which was already available here: https://www.thingiverse.com/thing:2894651 _
 
 ## Project goals:
 - of course a 3d printable and usable rollfilm back.
