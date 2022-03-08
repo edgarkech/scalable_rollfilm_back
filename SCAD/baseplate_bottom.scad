@@ -1,10 +1,3 @@
-/*
-This is the base configuration file for the scalable rollfilm back
-# we are not using the exact ANSI measures, but slightly rounded measures
-
-
-*/
-
 // BOSL2 includes (https://github.com/revarbat/BOSL2/wiki)  
 include <BOSL2/std.scad>
 include <BOSL2/joiners.scad>
@@ -12,6 +5,7 @@ include <BOSL2/joiners.scad>
 // include for a modified cube primitive (with rounded edges)
 include <rounded_cube.scad>;
 
+// including our configuration file
 include <config.scad>;
 
 
