@@ -1,17 +1,7 @@
 /*
 This is the base configuration file for the scalable rollfilm back
 # we are not using the exact ANSI measures, but slightly rounded measures
-
-
 */
-
-// BOSL2 includes (https://github.com/revarbat/BOSL2/wiki)  
-include <BOSL2/std.scad>
-include <BOSL2/joiners.scad>
-
-// include for a modified cube primitive (with rounded edges)
-use <rounded_cube.scad>;
-
 
 // general tolerance
 vTolerance = 0.2;
@@ -19,7 +9,7 @@ vTolerance = 0.2;
 // some generic variables
 $fn = 60; // we are using 60 fragments for cylinders and similar objects
 
-// target platform specific includes
+// target platforms
 // (currently only a reminder to put target platform specific variables into separate include files)
 // # 4x5 with a "native" format of 6x12 (smaller formats via different backplates/masks)
 // # 5x7 with a "native" format of 6x17 or 6x12
