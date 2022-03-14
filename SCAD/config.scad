@@ -3,6 +3,7 @@ This is the base configuration file for the scalable rollfilm back
 # we are not using the exact ANSI measures, but slightly rounded measures
 */
 
+/*
 // target platforms
 // (currently only a reminder to put target platform specific variables into separate include files)
 // # 4x5 with a "native" format of 6x12 (smaller formats via different backplates/masks)
@@ -19,6 +20,7 @@ This is the base configuration file for the scalable rollfilm back
 // # 6x14 / 2:5 / 56x136
 // # 6x17 / 1:3 / 56x168
 // # 6x24 / 1:4 / 56x224
+*/
 
 /*
 #############################################################################################
