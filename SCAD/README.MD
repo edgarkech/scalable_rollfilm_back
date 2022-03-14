@@ -10,11 +10,8 @@ Preparation:
 
 2.) Please make sure to pull and install the following modules/libraries:
 
-https://danielupshaw.com/openscad-rounded-corners/
-==> we are using this for getting cubes with rounded corners
-
 https://github.com/revarbat/BOSL2
-==> we are using some modules/functions from this quite comprehensive library, e.g. dovetails, rectangular tubes, ...
+==> we are using some modules/functions from this quite comprehensive library, e.g. dovetails, rectangular tubes, cuboids, trapezoids, ...
 
 3.) Review and modify the configuration in config.scad to your needs. For the most common target "platforms" and formats you will just have to choose and uncomment some variables. Just read&follow the comments in the config.scad file. 
 
