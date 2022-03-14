@@ -3,12 +3,6 @@ This is the base configuration file for the scalable rollfilm back
 # we are not using the exact ANSI measures, but slightly rounded measures
 */
 
-// general tolerance
-vTolerance = 0.2;
-
-// some generic variables
-$fn = 60; // we are using 60 fragments for cylinders and similar objects
-
 // target platforms
 // (currently only a reminder to put target platform specific variables into separate include files)
 // # 4x5 with a "native" format of 6x12 (smaller formats via different backplates/masks)
@@ -26,21 +20,41 @@ $fn = 60; // we are using 60 fragments for cylinders and similar objects
 // # 6x17 / 1:3 / 56x168
 // # 6x24 / 1:4 / 56x224
 
+/*
+#############################################################################################
+# with the following variables we control the frame format and the targeted "platform"      #
+# (currently setup for a 6x12 back for 4x5" cameras)                                        #
+#############################################################################################
+*/
+
 vCassetteLength = 170; // ANSI: 159.92 ... ?
 vCassetteWidth = 120.5; // ANSI: 120.24 ... 121.03
-vCassetteHeight = 8;
+vCassetteHeight = 8; // this is not ANSI, but just an assumption for the thickness of our backplate
 vCassetteBorderOffset = 76; // we will take the mid of the film frame as 0
 vLightTrapSlotOffset = 139; // CAUTION: this offset is measured from the back, not from the center of the frame
-vLightTrapSlotWidth = 2.2;
-vGraflokWidth = 5;
-vGraflokHeight = 6.2; // derived from the Graflok height
+vLightTrapSlotWidth = 2.2; // ANSI uses a trapezoid for the light seal. we are just using a cube with about 2mm width
+vGraflokWidth = 5; // measurement from a Horseman 6x9 roll film back for 4x5"
+vGraflokHeight = 6; // measurement from a Horseman 6x9 roll film back for 4x5"
 vFrameLength = 112;
 vFrameWidth = 56;
-vFilmPlaneDistance = 5;
+vFilmPlaneDistance = 5; // ANSI
 vFilmThickness = 0.3; // we are calculating 0.1...0.15 for the film + about the same amount for the back paper + a little bit tolerance
 
 vFilmrollDiameter = 26; 
 vFilmrollLength = 66;
+
+/*
+#############################################################################################
+# PLEASE DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU REALLY KNOW WHAT YOU ARE DOING! #
+#############################################################################################
+*/
+
+// general tolerance
+vTolerance = 0.2;
+
+// some generic variables
+$fn = 60; // we are using 60 fragments for cylinders and similar objects
+
 
 vDarkslideLength = vCassetteLength - 10;
 vDarkslideWidth = 66; // the dark slide will be 64...65mm wide, but we need a enough room on the sides
@@ -51,7 +65,7 @@ vDarkslideSealHeight = 1;
 vDarkslideGripCutout = 5;
 
 
-vBackplateTopLength = vCassetteLength - 3; 
+vBackplateTopLength = vCassetteLength - 3; // we need a stop at the back end of the backplate 
 vBackplateTopWidth = 98; // we are starting with the measurement from the original version
 
 vBackplateEdgeRadius = 1;
@@ -60,7 +74,6 @@ vBackplateEdgeRadius = 1;
 // we derive all other measures and variables from the above variables
 
 // base plate bottom outer
-// we want to have rounded edges, so we use the hull
 vBaseplate_l = vCassetteLength;
 vBaseplate_w = vCassetteWidth;
 vBaseplate_h = vCassetteHeight;
