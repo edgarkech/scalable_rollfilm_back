@@ -2,9 +2,6 @@
 include <BOSL2/std.scad>
 include <BOSL2/joiners.scad>
 
-// include for a modified cube primitive (with rounded edges)
-include <rounded_cube.scad>;
-
 // including our configuration file
 include <config.scad>;
 
@@ -20,7 +17,7 @@ union(){
         
         // film frame
         translate([vFilmframe_offsetX, vFilmframe_offsetY, vFilmframe_offsetZ])
-        roundedcube([vFilmframe_l, vFilmframe_w, vFilmframe_h], false, 1, "z");
+        cuboid([vFilmframe_l, vFilmframe_w, vFilmframe_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
         
         // film bed cutout
         translate([vFilmbedCutout_offsetX, vFilmbedCutout_offsetY, vFilmbedCutout_offsetZ])
@@ -46,5 +43,4 @@ union(){
     translate([vCoverLightSeal_offsetX, vCoverLightSeal_offsetY, vCoverLightSeal_offsetZ])
     rect_tube(size=[vCoverLightSeal_l,vCoverLightSeal_w], wall=vCoverLightSeal_wall, h=vCoverLightSeal_h);
 }
-
 

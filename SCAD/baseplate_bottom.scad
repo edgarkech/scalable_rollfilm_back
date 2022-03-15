@@ -2,9 +2,6 @@
 include <BOSL2/std.scad>
 include <BOSL2/joiners.scad>
 
-// include for a modified cube primitive (with rounded edges)
-include <rounded_cube.scad>;
-
 // including our configuration file
 include <config.scad>;
 
@@ -13,11 +10,11 @@ include <config.scad>;
 difference(){
     // base plate outer contour
     translate([vBaseplate_offsetX, vBaseplate_offsetY, vBaseplate_offsetZ])
-    roundedcube([vBaseplate_l, vBaseplate_w, vBaseplate_h], false, 1, "z");
+    cuboid([vBaseplate_l, vBaseplate_w, vBaseplate_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
     
     // film frame
     translate([vFilmframe_offsetX, vFilmframe_offsetY, vFilmframe_offsetZ])
-    roundedcube([vFilmframe_l, vFilmframe_w, vFilmframe_h], false, 1, "z");
+    cuboid([vFilmframe_l, vFilmframe_w, vFilmframe_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
     
     // bottom light trap slot
     translate([vBottomLightTrapSlot_offsetX, vBottomLightTrapSlot_offsetY, vBottomLightTrapSlot_offsetZ])

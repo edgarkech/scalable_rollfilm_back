@@ -55,7 +55,7 @@ vFilmrollLength = 66;
 vTolerance = 0.2;
 
 // some generic variables
-$fn = 60; // we are using 60 fragments for cylinders and similar objects
+$fn = 90; // we are using 90 fragments for cylinders and similar objects
 
 
 vDarkslideLength = vCassetteLength - 10;
@@ -170,4 +170,51 @@ vCoverLightSeal_wall = 2 - (2*vTolerance);
 vCoverLightSeal_offsetX = 0; // rect_tube centers by default, so we can leave the offset at 0
 vCoverLightSeal_offsetY = 0; // rect_tube centers by default, so we can leave the offset at 0
 vCoverLightSeal_offsetZ = vFilmPlaneDistance;
+
+
+
+vFilmInsertBaseplate_l = vFrameLength + 4;
+vFilmInsertBaseplate_w = 80;
+vFilmInsertBaseplate_h = 3;
+vFilmInsertBaseplate_offsetX = -vFilmInsertBaseplate_l/2;
+vFilmInsertBaseplate_offsetY = -vFilmInsertBaseplate_w/2;
+vFilmInsertBaseplate_offsetZ = vFilmPlaneDistance;
+
+vFilmRoller_d = 8;
+vFilmRoller_w = vFilmInsertBaseplate_w;
+vFilmRoller_offsetX = vFilmInsertBaseplate_offsetX;
+vFilmRoller_offsetY = vFilmInsertBaseplate_offsetY;
+vFilmRoller_offsetZ = vFilmPlaneDistance + vFilmRoller_d/2;
+
+vFilmInsertLowerSideWall_l = vFrameLength + 16;
+vFilmInsertLowerSideWall_w = 8;
+vFilmInsertLowerSideWall_h = vFilmRoller_d;
+vFilmInsertLowerSideWall_offsetX = -vFilmInsertLowerSideWall_l/2;
+vFilmInsertLowerSideWall_offsetY1 = -vFilmInsertBaseplate_w/2;
+vFilmInsertLowerSideWall_offsetY2 = vFilmInsertBaseplate_w/2 - vFilmInsertLowerSideWall_w;
+vFilmInsertLowerSideWall_offsetZ = vFilmPlaneDistance;
+
+vFilmSpool_d = vFilmrollDiameter;
+vFilmSpool_w = vFilmrollLength;
+vFilmSpool_offsetX = -(vFrameLength/2)+12;
+vFilmSpool_offsetY = -vFilmSpool_w/2;
+vFilmSpool_offsetZ = vFilmPlaneDistance + vFilmRoller_d + vFilmSpool_d/2;
+
+vFilmInsertSideWall_l = 40;
+vFilmInsertSideWall_w = 8;
+vFilmInsertSideWall_h = vFilmRoller_d;
+vFilmInsertSideWall_offsetX1 = -vFilmInsertLowerSideWall_l/2;
+vFilmInsertSideWall_offsetX2 = vFilmInsertLowerSideWall_l/2 - vFilmInsertSideWall_l;
+vFilmInsertSideWall_offsetY1 = -vFilmInsertBaseplate_w/2;
+vFilmInsertSideWall_offsetY2 = vFilmInsertBaseplate_w/2 - vFilmInsertSideWall_w;
+vFilmInsertSideWall_offsetZ = vFilmPlaneDistance;
+
+vFilmInsertSideWallTop_d = vFilmSpool_d + 4;
+vFilmInsertSideWallTop_w = vFilmInsertSideWall_w;
+vFilmInsertSideWallTop_offsetX = vFilmSpool_offsetX;
+vFilmInsertSideWallTop_offsetY1 = vFilmInsertSideWall_offsetY1;
+vFilmInsertSideWallTop_offsetY2 = vFilmInsertSideWall_offsetY2;
+vFilmInsertSideWallTop_offsetZ = vFilmSpool_offsetZ;
+
+
 
