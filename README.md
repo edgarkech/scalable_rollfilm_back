@@ -1,6 +1,6 @@
-# Scalable rollfilm back - 6x9...6x24 
+# Scalable rollfilm back - 6x9...6x17...maybe even 6x24? 
 
-_This is my attempt to create a scalable large format field camera design._
+_This is my attempt to re-engineer my old 6x12 rollfilm back into a scalable and adaptable design._
 
 For now I am re-engineering my old 6x12 TinkerCAD-design, which was already available here: https://www.thingiverse.com/thing:2894651 
 
