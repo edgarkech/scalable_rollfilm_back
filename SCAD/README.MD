@@ -1,5 +1,6 @@
 CAUTION: 
-At the moment this is just initial work to re-engineer my "old" 6x12 rollfilm back with OpenSCAD (https://www.thingiverse.com/thing:2894651). 
+At the moment this is just initial work to re-engineer my "old" 6x12 rollfilm back with OpenSCAD (https://www.thingiverse.com/thing:2894651).
+There are also "new" influences from the Linhof "Super Rollex" back.
 Don't expect a full and working set of parts until release 1.0.
 
 
