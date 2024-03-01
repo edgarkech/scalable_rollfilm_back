@@ -1,10 +1,13 @@
+/*
+// all includes are included in the assembly file, so no need do include them here (except temporarily for isolated part development)
+
 // BOSL2 includes (https://github.com/revarbat/BOSL2/wiki)  
 include <BOSL2/std.scad>
 include <BOSL2/joiners.scad>
 
 // including our configuration file
 include <config.scad>;
-
+*/
 
 // base plate bottom
 difference(){

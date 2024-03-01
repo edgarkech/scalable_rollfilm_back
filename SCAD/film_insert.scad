@@ -1,3 +1,6 @@
+
+// all includes are included in the assembly file, so no need do include them here (except temporarily for isolated part development)
+
 // BOSL2 includes (https://github.com/revarbat/BOSL2/wiki)  
 include <BOSL2/std.scad>
 include <BOSL2/joiners.scad>
@@ -6,7 +9,7 @@ include <BOSL2/joiners.scad>
 include <config.scad>;
 
 
-// top plate 
+// film insert
 difference(){
     union(){
         translate([vFilmInsertBaseplate_offsetX, vFilmInsertBaseplate_offsetY, vFilmInsertBaseplate_offsetZ])
@@ -23,48 +26,19 @@ difference(){
         cylinder(d=vFilmRoller_d, h=vFilmRoller_w);
         
         // lower side walls
-        translate([vFilmInsertLowerSideWall_offsetX, vFilmInsertLowerSideWall_offsetY1, vFilmInsertLowerSideWall_offsetZ])
-        cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
-        
-        translate([vFilmInsertLowerSideWall_offsetX, vFilmInsertLowerSideWall_offsetY2, vFilmInsertLowerSideWall_offsetZ])
-        cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
-        
-        // side walls
         chain_hull(){
-            translate([vFilmInsertSideWall_offsetX1, vFilmInsertSideWall_offsetY1, vFilmInsertSideWall_offsetZ])
-            cube([vFilmInsertSideWall_l, vFilmInsertSideWall_w, vFilmInsertSideWall_h]);
-            
-            translate([vFilmInsertSideWallTop_offsetX, vFilmInsertSideWallTop_offsetY1, vFilmInsertSideWallTop_offsetZ])
-            rotate([-90, 0, 0])
-            cylinder(d=vFilmInsertSideWallTop_d, h=vFilmInsertSideWallTop_w);
+            translate([vFilmInsertLowerSideWall_offsetX, vFilmInsertLowerSideWall_offsetY1, vFilmInsertLowerSideWall_offsetZ])
+            cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
+            translate([vFilmInsertUpperSideWall_offsetX, vFilmInsertUpperSideWall_offsetY1, vFilmInsertUpperSideWall_offsetZ])
+            cube([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h]);
+        }
+        chain_hull(){
+            translate([vFilmInsertLowerSideWall_offsetX, vFilmInsertLowerSideWall_offsetY2, vFilmInsertLowerSideWall_offsetZ])
+            cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
+            translate([vFilmInsertUpperSideWall_offsetX, vFilmInsertUpperSideWall_offsetY2, vFilmInsertUpperSideWall_offsetZ])
+            cube([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h]);
         }
         
-        chain_hull(){
-            translate([vFilmInsertSideWall_offsetX1, vFilmInsertSideWall_offsetY2, vFilmInsertSideWall_offsetZ])
-            cube([vFilmInsertSideWall_l, vFilmInsertSideWall_w, vFilmInsertSideWall_h]);
-            
-            translate([vFilmInsertSideWallTop_offsetX, vFilmInsertSideWallTop_offsetY2, vFilmInsertSideWallTop_offsetZ])
-            rotate([-90, 0, 0])
-            cylinder(d=vFilmInsertSideWallTop_d, h=vFilmInsertSideWallTop_w);
-        }
-        
-        chain_hull(){
-            translate([vFilmInsertSideWall_offsetX2, vFilmInsertSideWall_offsetY1, vFilmInsertSideWall_offsetZ])
-            cube([vFilmInsertSideWall_l, vFilmInsertSideWall_w, vFilmInsertSideWall_h]);
-            
-            translate([-vFilmInsertSideWallTop_offsetX, vFilmInsertSideWallTop_offsetY1, vFilmInsertSideWallTop_offsetZ])
-            rotate([-90, 0, 0])
-            cylinder(d=vFilmInsertSideWallTop_d, h=vFilmInsertSideWallTop_w);
-        }
-        
-        chain_hull(){
-            translate([vFilmInsertSideWall_offsetX2, vFilmInsertSideWall_offsetY2, vFilmInsertSideWall_offsetZ])
-            cube([vFilmInsertSideWall_l, vFilmInsertSideWall_w, vFilmInsertSideWall_h]);
-            
-            translate([-vFilmInsertSideWallTop_offsetX, vFilmInsertSideWallTop_offsetY2, vFilmInsertSideWallTop_offsetZ])
-            rotate([-90, 0, 0])
-            cylinder(d=vFilmInsertSideWallTop_d, h=vFilmInsertSideWallTop_w);
-        }
         
         
     }
@@ -80,3 +54,6 @@ difference(){
         cylinder(d=vFilmSpool_d, h=vFilmSpool_w);
 
 }
+
+
+

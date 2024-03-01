@@ -12,14 +12,16 @@ This is the base configuration file for the scalable rollfilm back
 // # custom (e.g. for dedicated 6x17 or 6x24 cameras)
 
 // target formats / aspect ratios / framesizes
-// # 6x6 / 1:1 / 56x56
-// # 6x7 / 6x7 / 56x66
-// # 6x8 / 3x4 / 56x74
-// # 6x9 / 2:3 / 56x84
-// # 6x12 / 1:2 / 56x112
-// # 6x14 / 2:5 / 56x136
-// # 6x17 / 1:3 / 56x168
-// # 6x24 / 1:4 / 56x224
+// # 6x6 / 1:1 / 56x56 / 12 frames
+// # 6x7 / 6x7 / 56x65 / 10 frames 
+// # 6x8 / 3x4 / 56x75 / 9 frames
+// # 6x9 / 2:3 / 56x84 / 8 frames
+// # 6x10 / 9:16 / 56x100 / 7 frames
+// # 6x12 / 1:2 / 56x112 / 6 frames
+// # 6x13 / 9:21 / 56x131
+// # 6x14 / 2:5 / 56x136 / 5 frames
+// # 6x17 / 1:3 / 56x168 / 4 frames
+// # 6x24 / 1:4 / 56x224 / 3 frames
 */
 
 /*
@@ -32,18 +34,29 @@ This is the base configuration file for the scalable rollfilm back
 vCassetteLength = 170; // ANSI: 159.92 ... ?
 vCassetteWidth = 120.5; // ANSI: 120.24 ... 121.03
 vCassetteHeight = 8; // this is not ANSI, but just an assumption for the thickness of our backplate
-vCassetteBorderOffset = 76; // we will take the mid of the film frame as 0
+vCassetteBorderOffset = 76; // we will take the mid of the film frame as 0 for the x axis
 vLightTrapSlotOffset = 139; // CAUTION: this offset is measured from the back, not from the center of the frame
 vLightTrapSlotWidth = 2.2; // ANSI uses a trapezoid for the light seal. we are just using a cube with about 2mm width
 vGraflokWidth = 5; // measurement from a Horseman 6x9 roll film back for 4x5"
 vGraflokHeight = 6; // measurement from a Horseman 6x9 roll film back for 4x5"
+
+/*
+############################################################################################ 
+## adjust the format here according to the mentioned sizes above! 
+*/
 vFrameLength = 112;
 vFrameWidth = 56;
+/*
+############################################################################################
+*/
+
 vFilmPlaneDistance = 5; // ANSI
 vFilmThickness = 0.3; // we are calculating 0.1...0.15 for the film + about the same amount for the back paper + a little bit tolerance
 
-vFilmrollDiameter = 26; 
-vFilmrollLength = 66;
+vFilmrollDiameter = 26; // max film roll diameter
+vFilmrollLength = 66; // max film roll length
+
+vFilmRoller_d = 12;
 
 /*
 #############################################################################################
@@ -57,6 +70,7 @@ vTolerance = 0.2;
 // some generic variables
 $fn = 90; // we are using 90 fragments for cylinders and similar objects
 
+vFilmInsert_w = 86; // we have to add at least 7mm to each side of the film roll, initially we used a total of 80
 
 vDarkslideLength = vCassetteLength - 10;
 vDarkslideWidth = 66; // the dark slide will be 64...65mm wide, but we need a enough room on the sides
@@ -68,12 +82,12 @@ vDarkslideGripCutout = 5;
 
 
 vBackplateTopLength = vCassetteLength - 3; // we need a stop at the back end of the backplate 
-vBackplateTopWidth = 98; // we are starting with the measurement from the original version
+vBackplateTopWidth = 104; // we are starting with the measurement from the original version (98)
 
 vBackplateEdgeRadius = 1;
 
 
-// we derive all other measures and variables from the above variables
+// we derive most measures and variables from the above variables
 
 // base plate bottom outer
 vBaseplate_l = vCassetteLength;
@@ -142,7 +156,7 @@ vTopplate_offsetX = vCassetteLength - vCassetteBorderOffset - (vTopplate_l/2);
 vTopplate_offsetY = 0;
 vTopplate_offsetZ = vCassetteHeight;
 
-vFilmbedCutout_l = vFrameLength + 16; // we add 8mm on each side to keep the film flat
+vFilmbedCutout_l = vFrameLength + 4 + vFilmRoller_d + 2 ; // we add 8mm on each side to keep the film flat
 vFilmbedCutout_w = vFrameWidth + 8; // backpaper is normally about 63mm, so we add 4mm on each side to our 56mm film frame
 vFilmbedCutout_h = vTopplate_h; // we just take the full height
 vFilmbedCutout_offsetX = -vFilmbedCutout_l/2;
@@ -150,21 +164,21 @@ vFilmbedCutout_offsetY = -vFilmbedCutout_w/2;
 vFilmbedCutout_offsetZ = vFilmPlaneDistance - vFilmThickness;
 
 vFilmInsertCutout_l = vFilmbedCutout_l + (2*vTolerance);
-vFilmInsertCutout_w = 80 + 2*vTolerance;
+vFilmInsertCutout_w = vFilmInsert_w + 2*vTolerance;
 vFilmInsertCutout_h = vTopplate_h;
 vFilmInsertCutout_offsetX = -vFilmInsertCutout_l/2;
 vFilmInsertCutout_offsetY = -vFilmInsertCutout_w/2;
 vFilmInsertCutout_offsetZ = vFilmPlaneDistance;
 
 vCoverCutout_l = vFilmbedCutout_l + 8 + (2*vTolerance);
-vCoverCutout_w = 80 + 8 + (2*vTolerance);
+vCoverCutout_w = vFilmInsert_w + 8 + (2*vTolerance);
 vCoverCutout_h = vTopplate_h;
 vCoverCutout_offsetX = -vCoverCutout_l/2;
 vCoverCutout_offsetY = -vCoverCutout_w/2;
 vCoverCutout_offsetZ = vFilmPlaneDistance;
 
 vCoverLightSeal_l = vFilmbedCutout_l + 4 - (2*vTolerance);
-vCoverLightSeal_w = 80 + 4 - (2*vTolerance);
+vCoverLightSeal_w = vFilmInsert_w + 4 - (2*vTolerance);
 vCoverLightSeal_h = 2 - vTolerance;
 vCoverLightSeal_wall = 2 - (2*vTolerance);
 vCoverLightSeal_offsetX = 0; // rect_tube centers by default, so we can leave the offset at 0
@@ -174,20 +188,20 @@ vCoverLightSeal_offsetZ = vFilmPlaneDistance;
 
 
 vFilmInsertBaseplate_l = vFrameLength + 4;
-vFilmInsertBaseplate_w = 80;
+vFilmInsertBaseplate_w = vFilmInsert_w;
 vFilmInsertBaseplate_h = 3;
 vFilmInsertBaseplate_offsetX = -vFilmInsertBaseplate_l/2;
 vFilmInsertBaseplate_offsetY = -vFilmInsertBaseplate_w/2;
 vFilmInsertBaseplate_offsetZ = vFilmPlaneDistance;
 
-vFilmRoller_d = 8;
+
 vFilmRoller_w = vFilmInsertBaseplate_w;
 vFilmRoller_offsetX = vFilmInsertBaseplate_offsetX;
 vFilmRoller_offsetY = vFilmInsertBaseplate_offsetY;
 vFilmRoller_offsetZ = vFilmPlaneDistance + vFilmRoller_d/2;
 
-vFilmInsertLowerSideWall_l = vFrameLength + 16;
-vFilmInsertLowerSideWall_w = 8;
+vFilmInsertLowerSideWall_l = vFilmInsertBaseplate_l + vFilmRoller_d + 2;
+vFilmInsertLowerSideWall_w = (vFilmInsert_w - vFilmrollLength)/2;
 vFilmInsertLowerSideWall_h = vFilmRoller_d;
 vFilmInsertLowerSideWall_offsetX = -vFilmInsertLowerSideWall_l/2;
 vFilmInsertLowerSideWall_offsetY1 = -vFilmInsertBaseplate_w/2;
@@ -196,25 +210,18 @@ vFilmInsertLowerSideWall_offsetZ = vFilmPlaneDistance;
 
 vFilmSpool_d = vFilmrollDiameter;
 vFilmSpool_w = vFilmrollLength;
-vFilmSpool_offsetX = -(vFrameLength/2)+12;
+vFilmSpool_offsetX = -(vFrameLength/2)+vFilmRoller_d/2+vFilmSpool_d/2;
 vFilmSpool_offsetY = -vFilmSpool_w/2;
-vFilmSpool_offsetZ = vFilmPlaneDistance + vFilmRoller_d + vFilmSpool_d/2;
+vFilmSpool_offsetZ = vFilmPlaneDistance + 1 + vFilmSpool_d/2;
 
-vFilmInsertSideWall_l = 40;
-vFilmInsertSideWall_w = 8;
-vFilmInsertSideWall_h = vFilmRoller_d;
-vFilmInsertSideWall_offsetX1 = -vFilmInsertLowerSideWall_l/2;
-vFilmInsertSideWall_offsetX2 = vFilmInsertLowerSideWall_l/2 - vFilmInsertSideWall_l;
-vFilmInsertSideWall_offsetY1 = -vFilmInsertBaseplate_w/2;
-vFilmInsertSideWall_offsetY2 = vFilmInsertBaseplate_w/2 - vFilmInsertSideWall_w;
-vFilmInsertSideWall_offsetZ = vFilmPlaneDistance;
+vFilmInsertUpperSideWall_l = vFilmInsertLowerSideWall_l - 2*(vFilmSpool_d + 2 - vFilmRoller_d);
+vFilmInsertUpperSideWall_w = vFilmInsertLowerSideWall_w;
+vFilmInsertUpperSideWall_h = vFilmSpool_d + 2;
+vFilmInsertUpperSideWall_offsetX = -vFilmInsertUpperSideWall_l/2;
+vFilmInsertUpperSideWall_offsetY1 = -vFilmInsertBaseplate_w/2;
+vFilmInsertUpperSideWall_offsetY2 = vFilmInsertBaseplate_w/2 - vFilmInsertUpperSideWall_w;
+vFilmInsertUpperSideWall_offsetZ = vFilmPlaneDistance;
 
-vFilmInsertSideWallTop_d = vFilmSpool_d + 4;
-vFilmInsertSideWallTop_w = vFilmInsertSideWall_w;
-vFilmInsertSideWallTop_offsetX = vFilmSpool_offsetX;
-vFilmInsertSideWallTop_offsetY1 = vFilmInsertSideWall_offsetY1;
-vFilmInsertSideWallTop_offsetY2 = vFilmInsertSideWall_offsetY2;
-vFilmInsertSideWallTop_offsetZ = vFilmSpool_offsetZ;
 
 
 
