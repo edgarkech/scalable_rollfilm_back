@@ -14,7 +14,7 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 
 ## Some technical goals:
 - modular design
-- all parts must be either 3D-printable or easily available.
+- all parts must be either 3D-printable or easily available via Amazon, eBay, Aliexpress or Temu.
 - no special tools required besides a decent 3D printer and some common tools like little files, screwdrivers, sanding paper, cutter, scissors, ...
 - no exotic third party parts/components
 - form follows function
@@ -33,6 +33,9 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 
 ## to do / next steps
 - re-engineering all parts based on my old concepts with some slight improvements
+
+## update 2024-03-01
+- looks like it will be a bit more re-engineering than just "porting" my old design to OpenSCAD. After having a look at some other (commercial) roll film backs like the Super Rollex or the Toyo family, I will also use some inspirations from there.  
 
 **Some very kind people asked me about the possibility to show their appreciation by donating to me.**
 
