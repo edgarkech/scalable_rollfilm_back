@@ -32,7 +32,8 @@ difference(){
         }
         
         // cutout for light seal
-        
+        translate([vCoverLightSealCutout_offsetX, vCoverLightSealCutout_offsetY, vCoverLightSealCutout_offsetZ])
+            cube([vCoverLightSealCutout_l, vCoverLightSealCutout_w, vCoverLightSealCutout_h]);
         
         // cutout for film advancing knob/lever
         
