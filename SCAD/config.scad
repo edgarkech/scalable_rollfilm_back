@@ -58,6 +58,9 @@ vFilmrollLength = 66; // max film roll length
 
 vFilmRoller_d = 12;
 
+vCoverWallThickness = 2;
+vCoverCutoutTolerance = 0.2;
+
 /*
 #############################################################################################
 # PLEASE DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU REALLY KNOW WHAT YOU ARE DOING! #
@@ -185,7 +188,7 @@ vCoverLightSeal_offsetX = 0; // rect_tube centers by default, so we can leave th
 vCoverLightSeal_offsetY = 0; // rect_tube centers by default, so we can leave the offset at 0
 vCoverLightSeal_offsetZ = vFilmPlaneDistance;
 
-
+// film insert
 
 vFilmInsertBaseplate_l = vFrameLength + 4;
 vFilmInsertBaseplate_w = vFilmInsert_w;
@@ -222,6 +225,32 @@ vFilmInsertUpperSideWall_offsetY1 = -vFilmInsertBaseplate_w/2;
 vFilmInsertUpperSideWall_offsetY2 = vFilmInsertBaseplate_w/2 - vFilmInsertUpperSideWall_w;
 vFilmInsertUpperSideWall_offsetZ = vFilmPlaneDistance;
 
+// cover specific
 
+vCoverLowerPart_l = vFilmInsertLowerSideWall_l + 2*vCoverCutoutTolerance + 4*vCoverWallThickness;
+vCoverLowerPart_w = vFilmInsertBaseplate_w + 2*vCoverCutoutTolerance + 4*vCoverWallThickness;
+vCoverLowerPart_h = vFilmInsertLowerSideWall_h + vCoverCutoutTolerance + vCoverWallThickness ;
+vCoverLowerPart_offsetX = -vCoverLowerPart_l/2;
+vCoverLowerPart_offsetY = -vCoverLowerPart_w/2;
+vCoverLowerPart_offsetZ = vFilmPlaneDistance;
 
+vCoverUpperPart_l = vFilmInsertUpperSideWall_l + 2*vCoverCutoutTolerance + 2*vCoverWallThickness;
+vCoverUpperPart_w = vFilmInsertBaseplate_w + 2*vCoverCutoutTolerance + 2*vCoverWallThickness;
+vCoverUpperPart_h = vFilmInsertUpperSideWall_h + vCoverCutoutTolerance + vCoverWallThickness ;
+vCoverUpperPart_offsetX = -vCoverUpperPart_l/2;
+vCoverUpperPart_offsetY = -vCoverUpperPart_w/2;
+vCoverUpperPart_offsetZ = vFilmPlaneDistance;
 
+vCoverCutoutLowerPart_l = vFilmInsertLowerSideWall_l + 2*vCoverCutoutTolerance;
+vCoverCutoutLowerPart_w = vFilmInsertBaseplate_w + 2*vCoverCutoutTolerance;
+vCoverCutoutLowerPart_h = vFilmInsertLowerSideWall_h + vCoverCutoutTolerance;
+vCoverCutoutLowerPart_offsetX = -vCoverCutoutLowerPart_l/2;
+vCoverCutoutLowerPart_offsetY = -vCoverCutoutLowerPart_w/2;
+vCoverCutoutLowerPart_offsetZ = vFilmPlaneDistance;
+
+vCoverCutoutUpperPart_l = vFilmInsertUpperSideWall_l + 2*vCoverCutoutTolerance;
+vCoverCutoutUpperPart_w = vFilmInsertBaseplate_w + 2*vCoverCutoutTolerance;
+vCoverCutoutUpperPart_h = vFilmInsertUpperSideWall_h + vCoverCutoutTolerance;
+vCoverCutoutUpperPart_offsetX = -vCoverCutoutUpperPart_l/2;
+vCoverCutoutUpperPart_offsetY = -vCoverCutoutUpperPart_w/2;
+vCoverCutoutUpperPart_offsetZ = vFilmPlaneDistance;
