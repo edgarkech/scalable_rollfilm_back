@@ -254,3 +254,10 @@ vCoverCutoutUpperPart_h = vFilmInsertUpperSideWall_h + vCoverCutoutTolerance;
 vCoverCutoutUpperPart_offsetX = -vCoverCutoutUpperPart_l/2;
 vCoverCutoutUpperPart_offsetY = -vCoverCutoutUpperPart_w/2;
 vCoverCutoutUpperPart_offsetZ = vFilmPlaneDistance;
+
+vCoverLightSealCutout_l = vFilmbedCutout_l + 4;
+vCoverLightSealCutout_w = vFilmInsert_w + 4;
+vCoverLightSealCutout_h = 2;
+vCoverLightSealCutout_offsetX = -vCoverLightSealCutout_l/2;
+vCoverLightSealCutout_offsetY = -vCoverLightSealCutout_w/2;
+vCoverLightSealCutout_offsetZ = vFilmPlaneDistance;
