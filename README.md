@@ -13,7 +13,7 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 - Checking out the limits of home 3D printing with a very limited set of available tools
 
 ## Some technical goals:
-- modular design
+- modular+parametric design
 - all parts must be either 3D-printable or easily available via Amazon, eBay, Aliexpress or Temu.
 - no special tools required besides a decent 3D printer and some common tools like little files, screwdrivers, sanding paper, cutter, scissors, ...
 - no exotic third party parts/components
@@ -22,9 +22,11 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 
 ## Early design decisions:
 - keeping the basic concepts of my old 6x12 back
+  - no explicit pressure plate
+  - film "rollers" are fixed because it's easier to keep the measures/tolerances
 - parts for the base plate won't be glued (except dark slide light seal) ==> dovetails
 - film "roller"/re-director will be integrated and printed
-- less "cubical" design
+- less "cubical" design than first version; maybe even flat enough to slide the back under the ground glass
 - using the excellent BOSL2 library https://github.com/revarbat/BOSL2/wiki 
 - no "extension" over the targeted platform and thus avoiding to move the film plane back (and using spacers or dedicated ground glassses): max format for 4x5" will be 6x12, max format for 5x7" will be 6x17
 
