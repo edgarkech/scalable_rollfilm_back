@@ -1,13 +1,14 @@
 # Scalable rollfilm back - 6x9...6x17...maybe even 6x24? 
 
-_This is my attempt to re-engineer my old 6x12 rollfilm back into a scalable and adaptable design._
+_This is my attempt to re-engineer my old 6x12 rollfilm back into a scalable and adaptable design for large format cameras (4x5", 5x7", maybe 8x10")._
+_
 
 As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiverse.com/thing:2894651 
 
 ## Project goals:
 - of course a 3d printable and usable rollfilm back.
 - different formats possible with type 120 rollfilm - from 6x6 up to 6x24 (depending on the targeted camera format) 
-- The design should be scalable for being used with 4x5", 5x7" or even 8x10" large format cameras by just changing a handful of variables.
+- The design should be scalable for being used with 4x5", 5x7" or even 8x10" large format cameras by just changing a handful of variables. I am not targeting medium format cameras/platforms like Mamiya RB/RZ, Bronica EC/GS/SQ/ETR, Hasselblad, Kiev88, Horseman 6x9, Graflex 2x3, Fuji GX or any other format smaller than 4x5".  
 - Improving my OpenSCAD skills. Learning to use it efficiently. Learning to do good parametric development/design.
 - Learning git/github and sharing my code with other people
 - Checking out the limits of home 3D printing with a very limited set of available tools
