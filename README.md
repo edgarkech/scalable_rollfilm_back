@@ -40,10 +40,11 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 ## update 2024-03-17 
 - I always wanted to ge rid of the screws for locking cover and baseplate together, so I am now locking cover, baseplate_top and baseplate_bottom via dovetails.
 - currently missing / not yet (re-) designed:
-- - advancing lever ==> I am currently evaluating different ratchet mechanisms/designs
-- - spool holders ==> will be quite simple parts
-- - film counter ==> for the first version I will stick to the "spy window"
-- - light seal for the baseplate bottom, but this is just a simple cubical to be glued into the base plate  
+  - advancing lever ==> I am currently evaluating different ratchet mechanisms/designs
+  - spool holders ==> will be quite simple parts
+  - film counter ==> for the first version I will stick to the "spy window"
+  - light seal for the baseplate bottom, but this is just a simple cubical to be glued into the base plate
+  - STLs. I didn't print any parts yet and it will probably take one or two itereations for all the tolerances to match.   
 
 **Some very kind people asked me about the possibility to show their appreciation by donating to me.**
 
