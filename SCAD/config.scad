@@ -55,6 +55,11 @@ vFilmThickness = 0.3; // we are calculating 0.1...0.15 for the film + about the 
 
 vFilmrollDiameter = 26; // max film roll diameter
 vFilmrollLength = 66; // max film roll length
+vFilmSpoolClearance = 4; // the space we need for inserting the film spool
+vFilmSpoolAxisDiameter = 12;
+vFilmSpoolAxisLightSealDiameter = 20;
+vFilmSpoolAxisLightSealDepth = 2;
+vFilmSpoolAxisExtension = 4; 
 
 vFilmRoller_d = 12;
 
@@ -85,7 +90,7 @@ vDarkslideGripCutout = 5;
 
 
 vBackplateTopLength = vCassetteLength - 3; // we need a stop at the back end of the backplate 
-vBackplateTopWidth = 104; // we are starting with the measurement from the original version (98)
+vBackplateTopWidth = 100; // we are starting with the measurement from the original version (98)
 
 vBackplateEdgeRadius = 1;
 
@@ -188,6 +193,12 @@ vCoverLightSeal_offsetX = 0; // rect_tube centers by default, so we can leave th
 vCoverLightSeal_offsetY = 0; // rect_tube centers by default, so we can leave the offset at 0
 vCoverLightSeal_offsetZ = vFilmPlaneDistance;
 
+
+
+
+
+
+
 // film insert
 
 vFilmInsertBaseplate_l = vFrameLength + 4;
@@ -225,18 +236,37 @@ vFilmInsertUpperSideWall_offsetY1 = -vFilmInsertBaseplate_w/2;
 vFilmInsertUpperSideWall_offsetY2 = vFilmInsertBaseplate_w/2 - vFilmInsertUpperSideWall_w;
 vFilmInsertUpperSideWall_offsetZ = vFilmPlaneDistance;
 
+vFilmSpoolAxisHole_d = vFilmSpoolAxisDiameter + 2*vTolerance;
+vFilmSpoolAxisHole_h = vFilmInsert_w + vFilmSpoolAxisExtension;
+vFilmSpoolAxisHole_offsetX = vFilmSpool_offsetX;
+vFilmSpoolAxisHole_offsetY = -vFilmInsert_w/2;
+vFilmSpoolAxisHole_offsetZ = vFilmSpool_offsetZ;
+
+vFilmSpoolAxisLightSeal_d = vFilmSpoolAxisLightSealDiameter + 2*vTolerance;
+vFilmSpoolAxisLightSeal_h = vFilmSpoolAxisLightSealDepth;
+vFilmSpoolAxisLightSeal_offsetX = vFilmSpool_offsetX;
+vFilmSpoolAxisLightSeal_offsetY = vFilmSpool_w/2;
+vFilmSpoolAxisLightSeal_offsetZ = vFilmSpool_offsetZ;
+
+vFilmSpoolAxisExtension_d = vFilmSpoolAxisLightSealDiameter;
+vFilmSpoolAxisExtension_h = vFilmSpoolAxisExtension;
+vFilmSpoolAxisExtension_offsetX = vFilmSpool_offsetX;
+vFilmSpoolAxisExtension_offsetY = vFilmInsert_w/2;
+vFilmSpoolAxisExtension_offsetZ = vFilmSpool_offsetZ;
+
+
 // cover specific
 
-vCoverLowerPart_l = vFilmInsertLowerSideWall_l + 2*vCoverCutoutTolerance + 4*vCoverWallThickness;
-vCoverLowerPart_w = vFilmInsertBaseplate_w + 2*vCoverCutoutTolerance + 4*vCoverWallThickness;
-vCoverLowerPart_h = vFilmInsertLowerSideWall_h + vCoverCutoutTolerance + vCoverWallThickness ;
+vCoverLowerPart_l = vFilmInsertLowerSideWall_l + 4*vCoverWallThickness;
+vCoverLowerPart_w = vFilmInsertBaseplate_w  + 4*vCoverWallThickness;
+vCoverLowerPart_h = vFilmInsertLowerSideWall_h  + vCoverWallThickness ;
 vCoverLowerPart_offsetX = -vCoverLowerPart_l/2;
 vCoverLowerPart_offsetY = -vCoverLowerPart_w/2;
 vCoverLowerPart_offsetZ = vFilmPlaneDistance;
 
-vCoverUpperPart_l = vFilmInsertUpperSideWall_l + 2*vCoverCutoutTolerance + 2*vCoverWallThickness;
-vCoverUpperPart_w = vFilmInsertBaseplate_w + 2*vCoverCutoutTolerance + 2*vCoverWallThickness;
-vCoverUpperPart_h = vFilmInsertUpperSideWall_h + vCoverCutoutTolerance + vCoverWallThickness ;
+vCoverUpperPart_l = vFilmInsertUpperSideWall_l  + 2*vCoverWallThickness;
+vCoverUpperPart_w = vFilmInsertBaseplate_w  + 2*vCoverWallThickness;
+vCoverUpperPart_h = vFilmInsertUpperSideWall_h  + vCoverWallThickness ;
 vCoverUpperPart_offsetX = -vCoverUpperPart_l/2;
 vCoverUpperPart_offsetY = -vCoverUpperPart_w/2;
 vCoverUpperPart_offsetZ = vFilmPlaneDistance;
@@ -261,3 +291,47 @@ vCoverLightSealCutout_h = 2;
 vCoverLightSealCutout_offsetX = -vCoverLightSealCutout_l/2;
 vCoverLightSealCutout_offsetY = -vCoverLightSealCutout_w/2;
 vCoverLightSealCutout_offsetZ = vFilmPlaneDistance;
+
+vCoverClaw_l = 18;
+vCoverClaw_w = vTopplate_w;
+vCoverClaw_h = vTopplate_h;
+vCoverClaw_offsetX1 = -(vFilmbedCutout_l-vCoverClaw_l)/2;
+vCoverClaw_offsetX2 = (vFilmbedCutout_l-vCoverClaw_l)/2;
+vCoverClaw_offsetY = vTopplate_offsetY;
+vCoverClaw_offsetZ = vTopplate_offsetZ;
+
+vCoverClawCutout_l = vCoverClaw_l + 2*vTolerance;
+vCoverClawCutout_w = 10 + vTolerance;
+vCoverClawCutout_h = 2*vTopplate_h;
+vCoverClawCutout_offsetX1 = -vFilmbedCutout_l/2 - vTolerance;
+vCoverClawCutout_offsetX2 = vFilmbedCutout_l/2 - vCoverClawCutout_l + vTolerance;
+vCoverClawCutout_offsetY1 = (vFilmInsert_w + 4 - 2*vTolerance)/2;
+vCoverClawCutout_offsetY2 = -(vFilmInsert_w + 4 - 2*vTolerance)/2 -vCoverClawCutout_w;
+vCoverClawCutout_offsetZ = 0;
+
+vFilmSpoolAxisExtensionCutout_d = vFilmSpoolAxisLightSealDiameter + 2*vTolerance;
+vFilmSpoolAxisExtensionCutout_h = vFilmSpoolAxisExtension;
+vFilmSpoolAxisExtensionCutout_offsetX = vFilmSpool_offsetX;
+vFilmSpoolAxisExtensionCutout_offsetY = vFilmInsert_w/2;
+vFilmSpoolAxisExtensionCutout_offsetZ = vFilmSpool_offsetZ;
+
+vFilmSpoolAxisExtensionLowerCutout_l = vFilmSpoolAxisLightSealDiameter + 2*vTolerance;
+vFilmSpoolAxisExtensionLowerCutout_w = vFilmSpoolAxisExtension;
+vFilmSpoolAxisExtensionLowerCutout_h = vCoverLowerPart_h;
+vFilmSpoolAxisExtensionLowerCutout_offsetX1 = - vFilmSpool_offsetX - vFilmSpoolAxisExtensionLowerCutout_l/2;
+vFilmSpoolAxisExtensionLowerCutout_offsetX2 = vFilmSpool_offsetX - vFilmSpoolAxisExtensionLowerCutout_l/2;
+vFilmSpoolAxisExtensionLowerCutout_offsetY = vFilmInsert_w/2;
+vFilmSpoolAxisExtensionLowerCutout_offsetZ = vFilmPlaneDistance;
+
+vFilmSpoolSpringCutout_d = vFilmSpoolAxisDiameter;
+vFilmSpoolSpringCutout_h = -vFilmSpool_offsetX -10;
+vFilmSpoolSpringCutout_offsetX = -vFilmSpool_offsetX;
+vFilmSpoolSpringCutout_offsetY = -vFilmInsert_w/2 - vFilmSpoolAxisDiameter/4;
+vFilmSpoolSpringCutout_offsetZ = vFilmSpool_offsetZ;
+
+vFilmSpoolSpringHole_d = 2;
+vFilmSpoolSpringHole_h = -vFilmSpool_offsetX*2;
+vFilmSpoolSpringHole_offsetX = vFilmSpool_offsetX;
+vFilmSpoolSpringHole_offsetY = -vFilmInsert_w/2 + 2;
+vFilmSpoolSpringHole_offsetZ = vFilmSpool_offsetZ;
+

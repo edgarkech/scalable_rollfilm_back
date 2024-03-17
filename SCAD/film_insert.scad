@@ -39,6 +39,14 @@ difference(){
             cube([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h]);
         }
         
+        // extensions for the film spool axis
+       translate([vFilmSpoolAxisExtension_offsetX, vFilmSpoolAxisExtension_offsetY, vFilmSpoolAxisExtension_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisExtension_d, h=vFilmSpoolAxisExtension_h);
+        translate([-vFilmSpoolAxisExtension_offsetX, vFilmSpoolAxisExtension_offsetY, vFilmSpoolAxisExtension_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisExtension_d, h=vFilmSpoolAxisExtension_h);
+        
         
         
     }
@@ -47,13 +55,63 @@ difference(){
         translate([vFilmSpool_offsetX, vFilmSpool_offsetY, vFilmSpool_offsetZ])
         rotate([-90, 0, 0])
         cylinder(d=vFilmSpool_d, h=vFilmSpool_w);
+    
+    // film spool clearance
+        translate([-vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpool_d, h=vFilmSpoolClearance);
+        translate([-vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        cube([vFilmSpool_d, vFilmSpoolClearance, vFilmSpool_d]);
+    
+    // film spool axis hole
+    translate([-vFilmSpoolAxisHole_offsetX, vFilmSpoolAxisHole_offsetY, vFilmSpoolAxisHole_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisHole_d, h=vFilmSpoolAxisHole_h);
+    
+    // film spool axis light seal
+    translate([-vFilmSpoolAxisLightSeal_offsetX, vFilmSpoolAxisLightSeal_offsetY, vFilmSpoolAxisLightSeal_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisLightSeal_d, h=vFilmSpoolAxisLightSeal_h);
+    
 
     // take up spool
         translate([-vFilmSpool_offsetX, vFilmSpool_offsetY, vFilmSpool_offsetZ])
         rotate([-90, 0, 0])
         cylinder(d=vFilmSpool_d, h=vFilmSpool_w);
-
+    
+    // take up spool clearance
+        translate([vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpool_d, h=vFilmSpoolClearance);
+        translate([vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        cube([vFilmSpool_d, vFilmSpoolClearance, vFilmSpool_d]);
+    
+    // take up spool axis hole
+    translate([vFilmSpoolAxisHole_offsetX, vFilmSpoolAxisHole_offsetY, vFilmSpoolAxisHole_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisHole_d, h=vFilmSpoolAxisHole_h);
+        
+    // take up spool axis light seal
+    translate([vFilmSpoolAxisLightSeal_offsetX, vFilmSpoolAxisLightSeal_offsetY, vFilmSpoolAxisLightSeal_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisLightSeal_d, h=vFilmSpoolAxisLightSeal_h);
+    
+    // spring cutout
+    translate([vFilmSpoolSpringCutout_offsetX, vFilmSpoolSpringCutout_offsetY, vFilmSpoolSpringCutout_offsetZ])
+        rotate([-90, 0, 90])
+        cylinder(d=vFilmSpoolSpringCutout_d, h=vFilmSpoolSpringCutout_h);
+   
+    translate([-vFilmSpoolSpringCutout_offsetX, vFilmSpoolSpringCutout_offsetY, vFilmSpoolSpringCutout_offsetZ])
+        rotate([-90, 0, -90])
+        cylinder(d=vFilmSpoolSpringCutout_d, h=vFilmSpoolSpringCutout_h);
+    
+    // hole for the spring
+    translate([-vFilmSpoolSpringHole_offsetX, vFilmSpoolSpringHole_offsetY, vFilmSpoolSpringHole_offsetZ])
+        rotate([-90, 0, 90])
+        cylinder(d=vFilmSpoolSpringHole_d, h=vFilmSpoolSpringHole_h);
+    
 }
+
 
 
 

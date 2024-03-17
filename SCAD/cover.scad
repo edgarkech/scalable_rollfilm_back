@@ -11,7 +11,7 @@ include <config.scad>;
 
 // film insert
 difference(){
-       
+       union(){
         // outside object
         chain_hull(){
             translate([vCoverLowerPart_offsetX, vCoverLowerPart_offsetY, vCoverLowerPart_offsetZ])
@@ -19,10 +19,18 @@ difference(){
             translate([vCoverUpperPart_offsetX, vCoverUpperPart_offsetY, vCoverUpperPart_offsetZ])
             cube([vCoverUpperPart_l, vCoverUpperPart_w, vCoverUpperPart_h]);
         }
-        // rails
+        // claws
+        
+        translate([vCoverClaw_offsetX1, vCoverClaw_offsetY, vCoverClaw_offsetZ])
+        rotate([0,0,90])
+        dovetail("female", slide=vCoverClaw_l, width=vCoverClaw_w, height=vCoverClaw_h, angle=30);
+        
+        translate([vCoverClaw_offsetX2, vCoverClaw_offsetY, vCoverClaw_offsetZ])
+        rotate([0,0,90])
+        dovetail("female", slide=vCoverClaw_l, width=vCoverClaw_w, height=vCoverClaw_h, angle=30);
         
         
-        
+    }
         // cutout for film insert
         chain_hull(){
             translate([vCoverCutoutLowerPart_offsetX, vCoverCutoutLowerPart_offsetY, vCoverCutoutLowerPart_offsetZ])
@@ -35,9 +43,23 @@ difference(){
         translate([vCoverLightSealCutout_offsetX, vCoverLightSealCutout_offsetY, vCoverLightSealCutout_offsetZ])
             cube([vCoverLightSealCutout_l, vCoverLightSealCutout_w, vCoverLightSealCutout_h]);
         
+        translate([vCoverLightSealCutout_offsetX, vCoverLightSealCutout_offsetY, 0])
+            cube([vCoverLightSealCutout_l, vCoverLightSealCutout_w, vCassetteHeight]);
+        
         // cutout for film advancing knob/lever
+        translate([vFilmSpoolAxisExtensionCutout_offsetX, vFilmSpoolAxisExtensionCutout_offsetY, vFilmSpoolAxisExtensionCutout_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisExtensionCutout_d, h=vFilmSpoolAxisExtensionCutout_h);
         
+        translate([-vFilmSpoolAxisExtensionCutout_offsetX, vFilmSpoolAxisExtensionCutout_offsetY, vFilmSpoolAxisExtensionCutout_offsetZ])
+        rotate([-90, 0, 0])
+        cylinder(d=vFilmSpoolAxisExtensionCutout_d, h=vFilmSpoolAxisExtensionCutout_h);
         
+        // lower cutouts
+        translate([vFilmSpoolAxisExtensionLowerCutout_offsetX1, vFilmSpoolAxisExtensionLowerCutout_offsetY, vFilmSpoolAxisExtensionLowerCutout_offsetZ])
+            cube([vFilmSpoolAxisExtensionLowerCutout_l, vFilmSpoolAxisExtensionLowerCutout_w, vFilmSpoolAxisExtensionLowerCutout_h]);
         
+        translate([vFilmSpoolAxisExtensionLowerCutout_offsetX2, vFilmSpoolAxisExtensionLowerCutout_offsetY, vFilmSpoolAxisExtensionLowerCutout_offsetZ])
+            cube([vFilmSpoolAxisExtensionLowerCutout_l, vFilmSpoolAxisExtensionLowerCutout_w, vFilmSpoolAxisExtensionLowerCutout_h]);
         
         }

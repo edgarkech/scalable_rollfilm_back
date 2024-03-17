@@ -21,10 +21,10 @@ include <baseplate_top.scad>;
 //color([0,230,0, 0.85]){
 include <film_insert.scad>;
 //}
-/*
+
 // cover
 //color([0,230,0, 0.85]){
-include <cover.scad>;
+//include <cover.scad>;
 //}
-*/
+
 

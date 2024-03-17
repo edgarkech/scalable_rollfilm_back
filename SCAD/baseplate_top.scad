@@ -38,6 +38,21 @@ union(){
         translate([vCoverCutout_offsetX, vCoverCutout_offsetY, vCoverCutout_offsetZ])
         cube([vCoverCutout_l, vCoverCutout_w, vCoverCutout_h]);
         
+        // claw cutouts
+        translate([vCoverClawCutout_offsetX1, vCoverClawCutout_offsetY1, vCoverClawCutout_offsetZ])
+        cube([vCoverClawCutout_l, vCoverClawCutout_w, vCoverClawCutout_h]);
+        
+        translate([vCoverClawCutout_offsetX2, vCoverClawCutout_offsetY1, vCoverClawCutout_offsetZ])
+        cube([vCoverClawCutout_l, vCoverClawCutout_w, vCoverClawCutout_h]);
+        
+        translate([vCoverClawCutout_offsetX1, vCoverClawCutout_offsetY2, vCoverClawCutout_offsetZ])
+        cube([vCoverClawCutout_l, vCoverClawCutout_w, vCoverClawCutout_h]);
+        
+        translate([vCoverClawCutout_offsetX2, vCoverClawCutout_offsetY2, vCoverClawCutout_offsetZ])
+        cube([vCoverClawCutout_l, vCoverClawCutout_w, vCoverClawCutout_h]);
+        
+        
+        
         
         // screw holes
         
