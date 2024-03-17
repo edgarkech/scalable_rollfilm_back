@@ -35,7 +35,15 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 - re-engineering all parts based on my old concepts with some slight improvements
 
 ## update 2024-03-01
-- looks like it will be a bit more re-engineering than just "porting" my old design to OpenSCAD. After having a look at some other (commercial) roll film backs like the Super Rollex or the Toyo family, I will also use some inspirations from there.  
+- looks like it will be a bit more re-engineering than just "porting" my old design to OpenSCAD. After having a look at some other (commercial) roll film backs like the Super Rollex or the Toyo family, I will also use some inspirations from there.
+
+## update 2024-03-17 
+- I always wanted to ge rid of the screws for locking cover and baseplate together, so I am now locking cover, baseplate_top and baseplate_bottom via dovetails.
+- currently missing / not yet (re-) designed:
+-- advancing lever ==> I am currently evaluating different ratchet mechanisms/designs
+-- spool holders ==> will be quite simple parts
+-- film counter ==> for the first version I will stick to the "spy window"
+-- light seal for the baseplate bottom, but this is just a simple cubical to be glued into the base plate  
 
 **Some very kind people asked me about the possibility to show their appreciation by donating to me.**
 
