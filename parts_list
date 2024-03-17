@@ -13,7 +13,13 @@ Print settings vary slightly for the different parts - if not explicitly mention
 The tolerances between the parts are quite tight, so you have to sand them. I recommend sanding the dovetail parts with 400 wet sanding paper. 
 
 printed parts list
-- tbd
+- baseplate_bottom
+- baseplate_top
+- film_insert
+- cover
+- advancing_lever
+- film_spool_holder (2x)
+- film_spool_winder (2x)
 
 non-printed parts
-- tbd
+- dark slide (sheetmetal)
