@@ -8,7 +8,7 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 ## Project goals:
 - of course a 3d printable and usable rollfilm back.
 - different formats possible with type 120 rollfilm - from 6x6 up to 6x24 (depending on the targeted camera format) 
-- The design should be scalable for being used with 4x5", 5x7" or even 8x10" large format cameras by just changing a handful of variables. I am not targeting medium format cameras/platforms like Mamiya RB/RZ, Bronica EC/GS/SQ/ETR, Hasselblad, Kiev88, Horseman 6x9, Graflex 2x3, Fuji GX or any other format smaller than 4x5".  
+- The design should be scalable for being used with 4x5", 5x7" or even 8x10" large format cameras by just changing a handful of variables. I am not targeting medium format cameras/platforms like Mamiya RB/RZ, Bronica EC/GS/SQ/ETR, Hasselblad, Kiev88, Horseman 6x9, Graflex 2x3, Fuji GX or any other format smaller than 4x5". It _may_ be possible to scale down and fit the design to some 6x9/2x3" platforms, but I won't make any changes just for scaling down.  
 - Improving my OpenSCAD skills. Learning to use it efficiently. Learning to do good parametric development/design.
 - Learning git/github and sharing my code with other people
 - Checking out the limits of home 3D printing with a very limited set of available tools
