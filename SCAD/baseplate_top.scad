@@ -32,7 +32,7 @@ union(){
            
         // dark slide grip cutout
         translate([vDarkslideGripCutout_offsetX, vDarkslideGripCutout_offsetY, vDarkslideGripCutout_offsetZ])
-        cube([vDarkslideGripCutout_l, vDarkslideGripCutout_w, vDarkslideGripCutout_h]);
+        cube([vDarkslideGripCutout_l+1, vDarkslideGripCutout_w, vCassetteHeight+1]);
         
         // cover cutout
         translate([vCoverCutout_offsetX, vCoverCutout_offsetY, vCoverCutout_offsetZ])

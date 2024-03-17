@@ -53,17 +53,17 @@ vFrameWidth = 56;
 vFilmPlaneDistance = 5; // ANSI
 vFilmThickness = 0.3; // we are calculating 0.1...0.15 for the film + about the same amount for the back paper + a little bit tolerance
 
-vFilmrollDiameter = 26; // max film roll diameter
-vFilmrollLength = 66; // max film roll length
-vFilmSpoolClearance = 4; // the space we need for inserting the film spool
+vFilmrollDiameter = 26; // max film roll diameter (empirical)
+vFilmrollLength = 66; // max film roll length (empirical)
+vFilmSpoolClearance = 4; // the space we need for inserting the film spool (empirical)
 vFilmSpoolAxisDiameter = 12;
 vFilmSpoolAxisLightSealDiameter = 20;
 vFilmSpoolAxisLightSealDepth = 2;
-vFilmSpoolAxisExtension = 4; 
+vFilmSpoolAxisExtension = 4; // should be at least equal to the lower walls of the cover 
 
-vFilmRoller_d = 12;
+vFilmRoller_d = 12; // while 16 or even more would require less film "bending", it would also require more precious space 
 
-vCoverWallThickness = 2;
+vCoverWallThickness = 2; // 2 should be sufficient for opacity and rigidity
 vCoverCutoutTolerance = 0.2;
 
 /*
@@ -194,11 +194,6 @@ vCoverLightSeal_offsetY = 0; // rect_tube centers by default, so we can leave th
 vCoverLightSeal_offsetZ = vFilmPlaneDistance;
 
 
-
-
-
-
-
 // film insert
 
 vFilmInsertBaseplate_l = vFrameLength + 4;
@@ -207,7 +202,6 @@ vFilmInsertBaseplate_h = 3;
 vFilmInsertBaseplate_offsetX = -vFilmInsertBaseplate_l/2;
 vFilmInsertBaseplate_offsetY = -vFilmInsertBaseplate_w/2;
 vFilmInsertBaseplate_offsetZ = vFilmPlaneDistance;
-
 
 vFilmRoller_w = vFilmInsertBaseplate_w;
 vFilmRoller_offsetX = vFilmInsertBaseplate_offsetX;
