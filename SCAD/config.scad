@@ -50,8 +50,8 @@ vFrameWidth = 56;
 ############################################################################################
 */
 
-vFilmPlaneDistance = 5; // ANSI
-vFilmThickness = 0.3; // we are calculating 0.1...0.15 for the film + about the same amount for the back paper + a little bit tolerance
+vFilmPlaneDistance = 5; // ANSI: 5
+vFilmThickness = 0.4; // we are calculating 0.12...0.18 for the film + about the same amount for the back paper + a little bit tolerance
 
 vFilmrollDiameter = 26; // max film roll diameter (empirical)
 vFilmrollLength = 66; // max film roll length (empirical)
@@ -90,7 +90,7 @@ vDarkslideGripCutout = 5;
 
 
 vBackplateTopLength = vCassetteLength - 3; // we need a stop at the back end of the backplate 
-vBackplateTopWidth = 100; // we are starting with the measurement from the original version (98)
+vBackplateTopWidth = 102; // we are starting with the measurement from the original version (98)
 
 vBackplateEdgeRadius = 1;
 
