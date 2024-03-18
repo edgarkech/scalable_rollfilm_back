@@ -329,3 +329,24 @@ vFilmSpoolSpringHole_offsetX = vFilmSpool_offsetX;
 vFilmSpoolSpringHole_offsetY = -vFilmInsert_w/2 + 2;
 vFilmSpoolSpringHole_offsetZ = vFilmSpool_offsetZ;
 
+vFilmSpoolHolderBase_d = vFilmSpoolAxisDiameter;
+vFilmSpoolHolderBase_h = (vFilmInsert_w - vFilmrollLength)/2;
+vFilmSpoolHolderAxis_d1 = 5;
+vFilmSpoolHolderAxis_d2 = 3;
+vFilmSpoolHolderAxis_h1 = 4;
+vFilmSpoolHolderAxis_h2 = 2;
+
+vWinderLightSeal_d = vFilmSpoolAxisLightSealDiameter;
+vWinderLightSeal_h = 2;
+vWinderBase_d = vFilmSpoolAxisDiameter;
+vWinderBase_h = (vFilmInsert_w - vFilmrollLength)/2 + vFilmSpoolAxisExtension + 2*vTolerance;
+vWinderHex_d = 7;
+vWinderHex_h = 12 + vTolerance;
+vWinderLeverScrewhole_d = 2.5;
+vWinderLeverScrewhole_h = vWinderHex_h;
+vWinderCutout_l = 10;
+vWinderCutout_w = 2 + vTolerance;
+vWinderCutout_h = (vFilmInsert_w - vFilmrollLength)/2;
+
+
+
