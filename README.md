@@ -47,7 +47,17 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
   - spool holders ==> will be quite simple parts
   - film counter ==> for the first version I will stick to the "spy window"
   - light seal for the baseplate bottom, but this is just a simple cubical to be glued into the base plate
-  - STLs. I didn't print any parts yet and it will probably take one or two itereations for all the tolerances to match.   
+  - STLs. I didn't print any parts yet and it will probably take one or two itereations for all the tolerances to match.
+
+## update 2024-03-19
+- printable parts are almost complete
+  - avancing lever is derived from a little ratchet tool
+  - film insert and cover got a counter window
+  - film insert is prepared for a unrolling preventer (to be made of spring steel wire)
+  - I am progressing with winders and spool holders
+- now it's time for lots of test printing.
+  - first test prints of the back plate revealed some small glitches (already fixed).
+  - first complete prototype will hopefully available by the upcoming weekend...
 
 **Some very kind people asked me about the possibility to show their appreciation by donating to me.**
 
