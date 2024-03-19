@@ -248,6 +248,32 @@ vFilmSpoolAxisExtension_offsetX = vFilmSpool_offsetX;
 vFilmSpoolAxisExtension_offsetY = vFilmInsert_w/2;
 vFilmSpoolAxisExtension_offsetZ = vFilmSpool_offsetZ;
 
+vCounterWindow_d = 12;
+vCounterWindow_h = vFilmInsertBaseplate_h;
+vCounterWindowTubeOuter_d = 20;
+vCounterWindowTubeInner_d = 16;
+vCounterWindowTube_h = vFilmInsertUpperSideWall_h - vFilmInsertBaseplate_h;
+vCounterWindowTube_offsetX = -13;
+vCounterWindowTube_offsetY = -3;
+vCounterWindowTube_offsetZ = vFilmPlaneDistance + vFilmInsertBaseplate_h;
+
+vMidwall_l = 12;
+vMidwall_w = vFilmInsert_w;
+vMidwall_h = 12;
+vMidwall_offsetX = -vMidwall_l/2;
+vMidwall_offsetY = -vMidwall_w/2;
+vMidwall_offsetZ = vFilmPlaneDistance + vFilmInsertBaseplate_h;
+
+vUnrollPreventerHole_d = 2;
+vUnrollPreventerHole_h = vMidwall_l;
+vUnrollPreventerHole_offsetX = 0;
+vUnrollPreventerHole_offsetY1 = -30;
+vUnrollPreventerHole_offsetY2 = -25;
+vUnrollPreventerHole_offsetY3 = 25;
+vUnrollPreventerHole_offsetY4 = 30;
+vUnrollPreventerHole_offsetZ = vFilmPlaneDistance + vFilmInsertBaseplate_h + vMidwall_h - 4;
+
+
 
 // cover specific
 
@@ -302,6 +328,18 @@ vCoverClawCutout_offsetX2 = vFilmbedCutout_l/2 - vCoverClawCutout_l + vTolerance
 vCoverClawCutout_offsetY1 = (vFilmInsert_w + 4 - 2*vTolerance)/2;
 vCoverClawCutout_offsetY2 = -(vFilmInsert_w + 4 - 2*vTolerance)/2 -vCoverClawCutout_w;
 vCoverClawCutout_offsetZ = 0;
+
+vCoverCounterWindow_d = vCounterWindowTubeInner_d;
+vCoverCounterWindow_h = vCoverWallThickness;
+vCoverCounterWindow_offsetZ1 = vFilmPlaneDistance + vCoverUpperPart_h - vCoverWallThickness;
+vCoverCounterWindowTubeOuter_d = vCounterWindowTubeOuter_d + 4;
+vCoverCounterWindowTubeInner_d = vCounterWindowTubeOuter_d + 2*vTolerance;
+vCoverCounterWindowTube_h = 2;
+vCoverCounterWindow_offsetX = vCounterWindowTube_offsetX;
+vCoverCounterWindow_offsetY = vCounterWindowTube_offsetY;
+vCoverCounterWindow_offsetZ2 = vFilmPlaneDistance + vCoverUpperPart_h - vCoverWallThickness - vCoverCounterWindowTube_h;
+
+
 
 vFilmSpoolAxisExtensionCutout_d = vFilmSpoolAxisLightSealDiameter + 2*vTolerance;
 vFilmSpoolAxisExtensionCutout_h = vFilmSpoolAxisExtension;

@@ -47,7 +47,13 @@ difference(){
         rotate([-90, 0, 0])
         cylinder(d=vFilmSpoolAxisExtension_d, h=vFilmSpoolAxisExtension_h);
         
+        // mid wall
+        translate([vMidwall_offsetX, vMidwall_offsetY, vMidwall_offsetZ])
+            cube([vMidwall_l, vMidwall_w, vMidwall_h]);
         
+        // tube for counter window
+        translate([vCounterWindowTube_offsetX, vCounterWindowTube_offsetY, vCounterWindowTube_offsetZ])
+        cylinder(d=vCounterWindowTubeOuter_d, h=vCounterWindowTube_h);
         
     }
 
@@ -109,6 +115,28 @@ difference(){
     translate([-vFilmSpoolSpringHole_offsetX, vFilmSpoolSpringHole_offsetY, vFilmSpoolSpringHole_offsetZ])
         rotate([-90, 0, 90])
         cylinder(d=vFilmSpoolSpringHole_d, h=vFilmSpoolSpringHole_h);
+        
+    // counter window
+    translate([vCounterWindowTube_offsetX, vCounterWindowTube_offsetY, vFilmPlaneDistance])
+        cylinder(d=vCounterWindow_d, h=vCounterWindow_h);
+    
+    // counter window tube    
+    translate([vCounterWindowTube_offsetX, vCounterWindowTube_offsetY, vCounterWindowTube_offsetZ])
+        cylinder(d=vCounterWindowTubeInner_d, h=vCounterWindowTube_h);
+    
+    // film unroll preventer holes
+    translate([vUnrollPreventerHole_offsetX, vUnrollPreventerHole_offsetY1, vUnrollPreventerHole_offsetZ])
+        rotate([90, 0, 90])
+        cylinder(d=vUnrollPreventerHole_d, h=vUnrollPreventerHole_h, center=true);
+    translate([vUnrollPreventerHole_offsetX, vUnrollPreventerHole_offsetY2, vUnrollPreventerHole_offsetZ])
+        rotate([90, 0, 90])
+        cylinder(d=vUnrollPreventerHole_d, h=vUnrollPreventerHole_h, center=true);
+    translate([vUnrollPreventerHole_offsetX, vUnrollPreventerHole_offsetY3, vUnrollPreventerHole_offsetZ])
+        rotate([90, 0, 90])
+        cylinder(d=vUnrollPreventerHole_d, h=vUnrollPreventerHole_h, center=true);
+    translate([vUnrollPreventerHole_offsetX, vUnrollPreventerHole_offsetY4, vUnrollPreventerHole_offsetZ])
+        rotate([90, 0, 90])
+        cylinder(d=vUnrollPreventerHole_d, h=vUnrollPreventerHole_h, center=true);    
     
 }
 
