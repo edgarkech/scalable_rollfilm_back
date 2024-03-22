@@ -31,8 +31,8 @@ union(){
         cube([vFilmInsertCutout_l, vFilmInsertCutout_w, vFilmInsertCutout_h]);
            
         // dark slide grip cutout
-        translate([vDarkslideGripCutout_offsetX, vDarkslideGripCutout_offsetY, vDarkslideGripCutout_offsetZ])
-        cube([vDarkslideGripCutout_l+1, vDarkslideGripCutout_w, vCassetteHeight+1]);
+        translate([vDarkSlideGripCutout_offsetX, vDarkSlideGripCutout_offsetY, vDarkSlideGripCutout_offsetZ])
+        cube([vDarkSlideGripCutout_l+1, vDarkSlideGripCutout_w, vCassetteHeight+1]);
         
         // cover cutout
         translate([vCoverCutout_offsetX, vCoverCutout_offsetY, vCoverCutout_offsetZ])
