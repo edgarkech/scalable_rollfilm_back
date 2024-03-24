@@ -55,7 +55,7 @@ vFilmThickness = 0.4; // we are calculating 0.12...0.18 for the film + about the
 
 vFilmrollDiameter = 26; // max film roll diameter (empirical)
 vFilmrollLength = 66; // max film roll length (empirical)
-vFilmSpoolClearance = 4; // the space we need for inserting the film spool (empirical)
+vFilmSpoolClearance = 5; // the space we need for inserting the film spool (empirical)
 vFilmSpoolAxisDiameter = 12;
 vFilmSpoolAxisLightSealDiameter = 20;
 vFilmSpoolAxisLightSealDepth = 2;
@@ -219,7 +219,7 @@ vFilmInsertLowerSideWall_offsetY2 = vFilmInsertBaseplate_w/2 - vFilmInsertLowerS
 vFilmInsertLowerSideWall_offsetZ = vFilmPlaneDistance;
 
 vFilmSpool_d = vFilmrollDiameter;
-vFilmSpool_w = vFilmrollLength;
+vFilmSpool_w = vFilmrollLength + 2; // we need about one mm clearance on the lever side, so we just add 2mm
 vFilmSpool_offsetX = -(vFrameLength/2)+vFilmRoller_d/2+vFilmSpool_d/2;
 vFilmSpool_offsetY = -vFilmSpool_w/2;
 vFilmSpool_offsetZ = vFilmPlaneDistance + 1 + vFilmSpool_d/2;

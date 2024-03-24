@@ -13,7 +13,8 @@ include <config.scad>;
 difference(){
     union(){
         translate([vFilmInsertBaseplate_offsetX, vFilmInsertBaseplate_offsetY, vFilmInsertBaseplate_offsetZ])
-        cube([vFilmInsertBaseplate_l, vFilmInsertBaseplate_w, vFilmInsertBaseplate_h]);
+        //cube([vFilmInsertBaseplate_l, vFilmInsertBaseplate_w, vFilmInsertBaseplate_h]);
+        cuboid([vFilmInsertBaseplate_l, vFilmInsertBaseplate_w, vFilmInsertBaseplate_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
         
         // film rollers
         translate([vFilmRoller_offsetX, vFilmRoller_offsetY, vFilmRoller_offsetZ])
@@ -28,15 +29,19 @@ difference(){
         // lower side walls
         chain_hull(){
             translate([vFilmInsertLowerSideWall_offsetX, vFilmInsertLowerSideWall_offsetY1, vFilmInsertLowerSideWall_offsetZ])
-            cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
+            //cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
+            cuboid([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
             translate([vFilmInsertUpperSideWall_offsetX, vFilmInsertUpperSideWall_offsetY1, vFilmInsertUpperSideWall_offsetZ])
-            cube([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h]);
+            //cube([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h]);
+            cuboid([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[BOT], p1=[0,0,0]);
         }
         chain_hull(){
             translate([vFilmInsertLowerSideWall_offsetX, vFilmInsertLowerSideWall_offsetY2, vFilmInsertLowerSideWall_offsetZ])
-            cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
+            //cube([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h]);
+            cuboid([vFilmInsertLowerSideWall_l, vFilmInsertLowerSideWall_w, vFilmInsertLowerSideWall_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
             translate([vFilmInsertUpperSideWall_offsetX, vFilmInsertUpperSideWall_offsetY2, vFilmInsertUpperSideWall_offsetZ])
-            cube([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h]);
+            //cube([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h]);
+            cuboid([vFilmInsertUpperSideWall_l, vFilmInsertUpperSideWall_w, vFilmInsertUpperSideWall_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[BOT], p1=[0,0,0]);
         }
         
         // extensions for the film spool axis
@@ -63,10 +68,10 @@ difference(){
         cylinder(d=vFilmSpool_d, h=vFilmSpool_w);
     
     // film spool clearance
-        translate([-vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([-vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         rotate([-90, 0, 0])
         cylinder(d=vFilmSpool_d, h=vFilmSpoolClearance);
-        translate([-vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([-vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         cube([vFilmSpool_d, vFilmSpoolClearance, vFilmSpool_d]);
     
     // film spool axis hole
@@ -86,10 +91,10 @@ difference(){
         cylinder(d=vFilmSpool_d, h=vFilmSpool_w);
     
     // take up spool clearance
-        translate([vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         rotate([-90, 0, 0])
         cylinder(d=vFilmSpool_d, h=vFilmSpoolClearance);
-        translate([vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         cube([vFilmSpool_d, vFilmSpoolClearance, vFilmSpool_d]);
     
     // take up spool axis hole
