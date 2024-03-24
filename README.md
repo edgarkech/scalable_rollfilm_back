@@ -59,6 +59,18 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
   - first test prints of the back plate revealed some small glitches (already fixed).
   - first complete prototype will hopefully available by the upcoming weekend...
 
+ ## update 2024-03-24
+ - meanwhile I printed all major parts.
+ - the parts are fitting together, but showed the need for minor fixes/improvements (mostly printing related)
+ - next iteration is leaving "mockup" stage and will be able to perform the basic mechanical functions (film loading, film advancing, disassembling without tools)
+   - clearance for the film spool inside the film insert was too tight (already fixed)
+   - replaced some cube() objects with cuboid() from the BOSL2 library to round some edges (already done)
+   - test with printed dark slide instead of sheet metal (cutting a raft from one of the prints), added file for printed dark slide
+   - printing related optimizations
+   - back plate light seal still missing
+   - winder blade still missing
+   - knob for film spool missing   
+
 **Some very kind people asked me about the possibility to show their appreciation by donating to me.**
 
 If you really felt somehow obliged to do so, then you should use https://paypal.me/EdgarKech :-) .
