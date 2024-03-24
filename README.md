@@ -31,12 +31,6 @@ As a starting point - here's my old 6x12 TinkerCAD-design: https://www.thingiver
 - using the excellent BOSL2 library https://github.com/revarbat/BOSL2/wiki 
 - no "extension" over the targeted platform and thus avoiding to move the film plane back (and using spacers or dedicated ground glassses): max format for 4x5" will be 6x12, max format for 5x7" will be 6x17
 
-## already done
-- nothing notable yet
-
-## to do / next steps
-- re-engineering all parts based on my old concepts with some slight improvements
-
 ## update 2024-03-01
 - looks like it will be a bit more re-engineering than just "porting" my old design to OpenSCAD. After having a look at some other (commercial) roll film backs like the Super Rollex or the Toyo family, I will also use some inspirations from there.
 
