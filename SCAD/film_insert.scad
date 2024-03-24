@@ -68,10 +68,10 @@ difference(){
         cylinder(d=vFilmSpool_d, h=vFilmSpool_w);
     
     // film spool clearance
-        translate([-vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([-vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         rotate([-90, 0, 0])
         cylinder(d=vFilmSpool_d, h=vFilmSpoolClearance);
-        translate([-vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([-vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         cube([vFilmSpool_d, vFilmSpoolClearance, vFilmSpool_d]);
     
     // film spool axis hole
@@ -91,10 +91,10 @@ difference(){
         cylinder(d=vFilmSpool_d, h=vFilmSpool_w);
     
     // take up spool clearance
-        translate([vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([vFilmSpool_offsetX, vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         rotate([-90, 0, 0])
         cylinder(d=vFilmSpool_d, h=vFilmSpoolClearance);
-        translate([vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance, vFilmSpool_offsetZ])
+        translate([vFilmSpool_offsetX-(vFilmSpool_d/2), vFilmSpool_offsetY-vFilmSpoolClearance+1, vFilmSpool_offsetZ])
         cube([vFilmSpool_d, vFilmSpoolClearance, vFilmSpool_d]);
     
     // take up spool axis hole
