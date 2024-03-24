@@ -80,13 +80,13 @@ $fn = 90; // we are using 90 fragments for cylinders and similar objects
 
 vFilmInsert_w = 86; // we have to add at least 7mm to each side of the film roll, initially we used a total of 80
 
-vDarkslideLength = vCassetteLength - 10;
-vDarkslideWidth = 66; // the dark slide will be 64...65mm wide, but we need a enough room on the sides
-vDarkslideHeight = 1; // we calculate with 1 but the real dark slide will be 0.5
-vDarkslideSealLength = 10;
-vDarkslideSealWidth = vDarkslideWidth;
-vDarkslideSealHeight = 1;
-vDarkslideGripCutout = 5;
+vDarkSlideLength = vCassetteLength - 10;
+vDarkSlideWidth = 65; // the dark slide will be 64...65mm wide, but we need a enough room on the sides
+vDarkSlideHeight = 0.8; // we calculate with 0.8 - the slot for the dark slide will be 1.0 
+vDarkSlideSealLength = 10;
+vDarkSlideSealWidth = vDarkSlideWidth;
+vDarkSlideSealHeight = 1;
+vDarkSlideGripCutout = 5;
 
 
 vBackplateTopLength = vCassetteLength - 3; // we need a stop at the back end of the backplate 
@@ -119,26 +119,28 @@ vTopplateCutout_offsetX = vCassetteLength - vCassetteBorderOffset - (vTopplateCu
 vTopplateCutout_offsetY = 0;
 vTopplateCutout_offsetZ = vCassetteHeight;
 
-vDarkslideCutout_l = vDarkslideLength;
-vDarkslideCutout_w = vDarkslideWidth;
-vDarkslideCutout_h = vCassetteHeight;
-vDarkslideCutout_offsetX = -vCassetteBorderOffset+10;
-vDarkslideCutout_offsetY = -vDarkslideCutout_w/2;
-vDarkslideCutout_offsetZ = 2;
+vDarkSlideCutout_l = vDarkSlideLength;
+vDarkSlideCutout_w = vDarkSlideWidth + 1;
+vDarkSlideCutout_h = vCassetteHeight;
+vDarkSlideCutout_offsetX = -vCassetteBorderOffset+10;
+vDarkSlideCutout_offsetY = -vDarkSlideCutout_w/2;
+vDarkSlideCutout_offsetZ = 2; // maybe reduce to 1.8
 
-vDarkslideGripCutout_l = vDarkslideGripCutout;
-vDarkslideGripCutout_w = vDarkslideWidth;
-vDarkslideGripCutout_h = vCassetteHeight;
-vDarkslideGripCutout_offsetX = vCassetteLength - vCassetteBorderOffset - vDarkslideGripCutout;
-vDarkslideGripCutout_offsetY = -vDarkslideWidth/2;
-vDarkslideGripCutout_offsetZ = 0;
+vDarkSlideGripCutout_l = vDarkSlideGripCutout;
+vDarkSlideGripCutout_w = vDarkSlideWidth + 1;
+vDarkSlideGripCutout_h = vCassetteHeight;
+vDarkSlideGripCutout_offsetX = vCassetteLength - vCassetteBorderOffset - vDarkSlideGripCutout;
+vDarkSlideGripCutout_offsetY = -vDarkSlideGripCutout_w/2;
+vDarkSlideGripCutout_offsetZ = 0;
 
-vDarkslideSealCutout_l = vDarkslideSealLength;
-vDarkslideSealCutout_w = vDarkslideWidth;
-vDarkslideSealCutout_h = vCassetteHeight;
-vDarkslideSealCutout_offsetX = vCassetteLength - vCassetteBorderOffset - vDarkslideGripCutout - vDarkslideSealCutout_l - 5;
-vDarkslideSealCutout_offsetY = -vDarkslideWidth/2;
-vDarkslideSealCutout_offsetZ = 1.2;
+
+// remove?
+vDarkSlideSealCutout_l = vDarkSlideSealLength;
+vDarkSlideSealCutout_w = vDarkSlideWidth;
+vDarkSlideSealCutout_h = vCassetteHeight;
+vDarkSlideSealCutout_offsetX = vCassetteLength - vCassetteBorderOffset - vDarkSlideGripCutout - vDarkSlideSealCutout_l - 5;
+vDarkSlideSealCutout_offsetY = -vDarkSlideWidth/2;
+vDarkSlideSealCutout_offsetZ = 1.2;
 
 vBottomLightTrapSlot_l = vLightTrapSlotWidth;
 vBottomLightTrapSlot_w = vBaseplate_w;
@@ -387,4 +389,17 @@ vWinderCutout_w = 2 + vTolerance;
 vWinderCutout_h = (vFilmInsert_w - vFilmrollLength)/2;
 
 
+// dark slide
+vDarkSlide_l = vDarkSlideLength;
+vDarkSlide_w = vDarkSlideWidth;
+vDarkSlide_h = vDarkSlideHeight;
+vDarkSlide_offsetX = -vCassetteBorderOffset+10;
+vDarkSlide_offsetY = -vDarkSlide_w/2;
+vDarkSlide_offsetZ = vDarkSlideCutout_offsetZ + vTolerance;
 
+vDarkSlideGrip_l = 15;
+vDarkSlideGrip_w = vDarkSlideWidth;
+vDarkSlideGrip_h = 5;
+vDarkSlideGrip_offsetX = vCassetteLength - vCassetteBorderOffset - vDarkSlideGripCutout + vTolerance;
+vDarkSlideGrip_offsetY = -vDarkSlideGrip_w/2;
+vDarkSlideGrip_offsetZ = vDarkSlide_offsetZ;

@@ -30,16 +30,16 @@ difference(){
     dovetail("female", slide=vTopplateCutout_l, width=vTopplateCutout_w, height=vTopplateCutout_h, angle=30);
     
     // dark slide cutout
-    translate([vDarkslideCutout_offsetX, vDarkslideCutout_offsetY, vDarkslideCutout_offsetZ])
-    cube([vDarkslideCutout_l, vDarkslideCutout_w, vDarkslideCutout_h]);
+    translate([vDarkSlideCutout_offsetX, vDarkSlideCutout_offsetY, vDarkSlideCutout_offsetZ])
+    cube([vDarkSlideCutout_l, vDarkSlideCutout_w, vDarkSlideCutout_h]);
     
     // dark slide grip cutout
-    translate([vDarkslideGripCutout_offsetX, vDarkslideGripCutout_offsetY, vDarkslideGripCutout_offsetZ])
-    cube([vDarkslideGripCutout_l, vDarkslideGripCutout_w, vDarkslideGripCutout_h]);
+    translate([vDarkSlideGripCutout_offsetX, vDarkSlideGripCutout_offsetY, vDarkSlideGripCutout_offsetZ])
+    cube([vDarkSlideGripCutout_l, vDarkSlideGripCutout_w, vDarkSlideGripCutout_h]);
     
     // dark slide seal cutout
-    translate([vDarkslideSealCutout_offsetX, vDarkslideSealCutout_offsetY, vDarkslideSealCutout_offsetZ])
-    cube([vDarkslideSealCutout_l, vDarkslideSealCutout_w, vDarkslideSealCutout_h]);
+    //translate([vDarkSlideSealCutout_offsetX, vDarkSlideSealCutout_offsetY, vDarkSlideSealCutout_offsetZ])
+    //cube([vDarkSlideSealCutout_l, vDarkSlideSealCutout_w, vDarkSlideSealCutout_h]);
     
     // Graflok cutouts
     translate([vGraflokCutout_offsetX, vGraflokCutout_offsetY1, vGraflokCutout_offsetZ])
