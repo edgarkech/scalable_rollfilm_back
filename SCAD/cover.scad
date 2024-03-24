@@ -19,9 +19,11 @@ union(){
             // outside object
             chain_hull(){
                 translate([vCoverLowerPart_offsetX, vCoverLowerPart_offsetY, vCoverLowerPart_offsetZ])
-                cube([vCoverLowerPart_l, vCoverLowerPart_w, vCoverLowerPart_h]);
+                // cube([vCoverLowerPart_l, vCoverLowerPart_w, vCoverLowerPart_h]);
+                cuboid([vCoverLowerPart_l, vCoverLowerPart_w, vCoverLowerPart_h], rounding=2, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
                 translate([vCoverUpperPart_offsetX, vCoverUpperPart_offsetY, vCoverUpperPart_offsetZ])
-                cube([vCoverUpperPart_l, vCoverUpperPart_w, vCoverUpperPart_h]);
+                // cube([vCoverUpperPart_l, vCoverUpperPart_w, vCoverUpperPart_h]);
+                cuboid([vCoverUpperPart_l, vCoverUpperPart_w, vCoverUpperPart_h], rounding=2, edges=[FRONT,LEFT,BACK,RIGHT], except=[BOT], p1=[0,0,0]);
             }
             // claws
             
@@ -38,9 +40,11 @@ union(){
             // cutout for film insert
             chain_hull(){
                 translate([vCoverCutoutLowerPart_offsetX, vCoverCutoutLowerPart_offsetY, vCoverCutoutLowerPart_offsetZ])
-                cube([vCoverCutoutLowerPart_l, vCoverCutoutLowerPart_w, vCoverCutoutLowerPart_h]);
+                // cube([vCoverCutoutLowerPart_l, vCoverCutoutLowerPart_w, vCoverCutoutLowerPart_h]);
+                cuboid([vCoverCutoutLowerPart_l, vCoverCutoutLowerPart_w, vCoverCutoutLowerPart_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[TOP,BOT], p1=[0,0,0]);
                 translate([vCoverCutoutUpperPart_offsetX, vCoverCutoutUpperPart_offsetY, vCoverCutoutUpperPart_offsetZ])
-                cube([vCoverCutoutUpperPart_l, vCoverCutoutUpperPart_w, vCoverCutoutUpperPart_h]);
+                // cube([vCoverCutoutUpperPart_l, vCoverCutoutUpperPart_w, vCoverCutoutUpperPart_h]);
+                cuboid([vCoverCutoutUpperPart_l, vCoverCutoutUpperPart_w, vCoverCutoutUpperPart_h], rounding=1, edges=[FRONT,LEFT,BACK,RIGHT], except=[BOT], p1=[0,0,0]);
             }
             
             // cutout for light seal
