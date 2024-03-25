@@ -8,7 +8,7 @@ include <BOSL2/joiners.scad>
 // including our configuration file
 include <config.scad>;
 
-
+difference(){
 union(){
 translate([vDarkSlide_offsetX, vDarkSlide_offsetY, vDarkSlide_offsetZ])
 //    cube([vDarkSlide_l, vDarkSlide_w, vDarkSlide_h]);
@@ -16,4 +16,10 @@ translate([vDarkSlide_offsetX, vDarkSlide_offsetY, vDarkSlide_offsetZ])
 translate([vDarkSlideGrip_offsetX, vDarkSlideGrip_offsetY, vDarkSlideGrip_offsetZ])
 //    cube([vDarkSlide_l, vDarkSlide_w, vDarkSlide_h]);
     cuboid([vDarkSlideGrip_l, vDarkSlideGrip_w, vDarkSlideGrip_h], rounding=2, edges=[FRONT,LEFT,BACK,RIGHT], except=[BOT], p1=[0,0,0]);
+}
+translate([vDarkSlideIndent_offsetX, vDarkSlideIndent_offsetY, vDarkSlideIndent_offsetZ])
+    cylinder(d=vDarkSlideIndent_d, h=vDarkSlideIndent_h);
+translate([vDarkSlideIndent_offsetX, -vDarkSlideIndent_offsetY, vDarkSlideIndent_offsetZ])
+    cylinder(d=vDarkSlideIndent_d, h=vDarkSlideIndent_h);
+
 }
