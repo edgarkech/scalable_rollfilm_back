@@ -376,6 +376,7 @@ vFilmSpoolHolderAxis_d2 = 3;
 vFilmSpoolHolderAxis_h1 = 4;
 vFilmSpoolHolderAxis_h2 = 2;
 
+// winders
 vWinderLightSeal_d = vFilmSpoolAxisLightSealDiameter;
 vWinderLightSeal_h = 2;
 vWinderBase_d = vFilmSpoolAxisDiameter;
@@ -388,6 +389,23 @@ vWinderCutout_l = 10;
 vWinderCutout_w = 2 + vTolerance;
 vWinderCutout_h = (vFilmInsert_w - vFilmrollLength)/2;
 
+// winder blades
+vWinderBlade_l = vWinderCutout_h + 5;
+vWinderBlade_w = vWinderCutout_l - vTolerance;
+vWinderBlade_h = 2;
+vWinderBladeEdgeCutOff = 3;
+
+// winder knob
+vWinderKnob_d = vFilmSpoolAxisLightSealDiameter;
+vWinderKnob_h = vWinderHex_h;
+vWinderHexCutout_d = vWinderHex_d + vTolerance;
+vWinderHexCutout_h = vWinderKnob_h;
+vWinderKnobEdgeCutOff = 2;
+
+// bottom light trap
+vBottomLightTrap_l = 2;
+vBottomLightTrap_h = 3;
+vBottomLightTrap_w = vBaseplate_w;
 
 // dark slide
 vDarkSlide_l = vDarkSlideLength;
