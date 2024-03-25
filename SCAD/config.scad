@@ -369,11 +369,13 @@ vFilmSpoolSpringHole_offsetX = vFilmSpool_offsetX;
 vFilmSpoolSpringHole_offsetY = -vFilmInsert_w/2 + 2;
 vFilmSpoolSpringHole_offsetZ = vFilmSpool_offsetZ;
 
-vFilmSpoolHolderBase_d = vFilmSpoolAxisDiameter;
-vFilmSpoolHolderBase_h = (vFilmInsert_w - vFilmrollLength)/2;
+vFilmSpoolHolderBase_d1 = vFilmSpoolAxisDiameter;
+vFilmSpoolHolderBase_d2 = vFilmSpoolAxisDiameter - 3;
+vFilmSpoolHolderBase_h1 = 3;
+vFilmSpoolHolderBase_h2 = (vFilmInsert_w - vFilmrollLength)/2 - vFilmSpoolHolderBase_h1;
 vFilmSpoolHolderAxis_d1 = 5;
 vFilmSpoolHolderAxis_d2 = 3;
-vFilmSpoolHolderAxis_h1 = 4;
+vFilmSpoolHolderAxis_h1 = 3;
 vFilmSpoolHolderAxis_h2 = 2;
 
 // winders
@@ -381,7 +383,7 @@ vWinderLightSeal_d = vFilmSpoolAxisLightSealDiameter;
 vWinderLightSeal_h = 2;
 vWinderBase_d = vFilmSpoolAxisDiameter;
 vWinderBase_h = (vFilmInsert_w - vFilmrollLength)/2 + vFilmSpoolAxisExtension + 2*vTolerance;
-vWinderHex_d = 7;
+vWinderHex_d = 9.1; // should result in key width 8mm
 vWinderHex_h = 12 + vTolerance;
 vWinderLeverScrewhole_d = 2.5;
 vWinderLeverScrewhole_h = vWinderHex_h;
@@ -396,9 +398,9 @@ vWinderBlade_h = 2;
 vWinderBladeEdgeCutOff = 3;
 
 // winder knob
-vWinderKnob_d = vFilmSpoolAxisLightSealDiameter;
+vWinderKnob_d = vFilmSpoolAxisLightSealDiameter - 1;
 vWinderKnob_h = vWinderHex_h;
-vWinderHexCutout_d = vWinderHex_d + vTolerance;
+vWinderHexCutout_d = vWinderHex_d + (2*vTolerance);
 vWinderHexCutout_h = vWinderKnob_h;
 vWinderKnobEdgeCutOff = 2;
 
@@ -421,3 +423,9 @@ vDarkSlideGrip_h = 5;
 vDarkSlideGrip_offsetX = vCassetteLength - vCassetteBorderOffset - vDarkSlideGripCutout + vTolerance;
 vDarkSlideGrip_offsetY = -vDarkSlideGrip_w/2;
 vDarkSlideGrip_offsetZ = vDarkSlide_offsetZ;
+
+vDarkSlideIndent_d = 2;
+vDarkSlideIndent_h = vDarkSlide_h;
+vDarkSlideIndent_offsetX = -vFrameLength/2 - 10+38; //empirical
+vDarkSlideIndent_offsetY = -vDarkSlide_w/2;
+vDarkSlideIndent_offsetZ = vDarkSlideCutout_offsetZ + vTolerance;

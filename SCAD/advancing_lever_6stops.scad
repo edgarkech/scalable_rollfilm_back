@@ -60,8 +60,8 @@ module body()
         translate([-20,6.0,0]) cylinder(d=1,h=4,center=true);
         //translate([-0.2,10.6,0]) cylinder(d=1.6,h=16,center=true);
         //translate([-20,10.6,0]) cylinder(d=1.6,h=16,center=true);
-        translate([-0.2,10.5,0]) cylinder(d=2,h=16,center=true);
-        translate([-20,10.5,0]) cylinder(d=2,h=16,center=true); 
+        translate([-0.2,10.5,0]) cylinder(d=2.4,h=16,center=true);
+        translate([-20,10.5,0]) cylinder(d=2.4,h=16,center=true); 
       }
     }
   }
@@ -124,7 +124,7 @@ module eye()
     {
       hull()
       {
-        translate([0,0,0]) cylinder(d=10,h=12,center=true);
+        translate([0,0,0]) cylinder(d=10.5,h=12,center=true);
         translate([0,0,0]) cylinder(d=16,h=3,center=true);
       }
     }
@@ -133,7 +133,8 @@ module eye()
       translate([0,0,pos_hex]) cylinder(d=6.65,h=12,center=true); // HEX Zylinder
       difference()
       {
-        translate([0,0,pos_hex]) cylinder(d=7.7,h=12,center=true,$fn=6); // HEX Sechseck
+        translate([0,0,pos_hex]) cylinder(d=9.5,h=12,center=true,$fn=6); // HEX Sechseck
+        //  translate([0,0,pos_hex]) cylinder(d=7.7,h=12,center=true,$fn=6); // HEX Sechseck
       }
       // for(i=[30:60:360]) // 6 stops
       for(i=[30:60:360]) // 6 stops    
