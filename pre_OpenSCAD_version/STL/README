@@ -1,0 +1,96 @@
+### Summary
+Roll film back for shooting 6x12cm format with 4x5 cameras.
+The basic idea is borrowed from the chinese DaYi / ShenHao roll film backs.
+Main design principle is to keep it as simple as possible and avoiding special or exotic third party parts or tools.
+
+# Third party parts:
+2x rods or tubes with a diameter of 6mm and a length of 72mm
+2x countersunk screws M6x30mm
+2x butterfly or knurled nuts M6
+1x dark red gel with about 14mm for the frame counter window (optional)
+1x sheet metal 170x70x0.5mm for dark slide (170mm is about the minimum length)
+2x sheet metal from a tin can, about 20x60mm
+a little bit of plastic glue
+1x velvet ribbon, about 10x90mm as light seal for the dark slide
+
+Pictures shot with my design can be found here:
+https://www.flickr.com/search/?text=6x12%20istillshootfilm%20buyfilmnotmegapixels%20back&sort=date-posted-desc
+
+### Changes
+- 2020-01-25 updated the base plate top (slightly higher light seal, corrected flange measurements)
+- 2020-01-26 updated the cover because it was a little bit to tight on the film insert. New version has about 0.2mm more space on each side. This helps also, if you are using some colored filament and thus have to paint the inside of the cover in black. 
+- 2020-02-02 updated base plate bottom and base plate top to new version 2.4.
+I added a wall at one side and on the other side an indent for a light seal (glue velvet ribbon into the indent.
+Also updated the pictures to ones from the latest build and removed the ones from the old version.
+- 2020-02-07 tried to get the previews of all STL-files back. No changes, just renaming the files to reflect the overall version
+- 2020-02-08 added link to my flickr page
+- 2020-03-06 updated base plate top to v2.5 because of a little error.
+- 2020-03-19 updated text and instructions regarding dark slide (now minimum length of about 170mm)
+- 2021-08-11 I finally managed to export my design files from TinkerCAD to Fusion360 and then download/upload as .f3d files , so interested/gifted designers may now be able to modify my design in a more convenient way than using .stl files...
+
+### Print Settings
+Printer brand:
+- any brand will do, as long as you have a basic understanding of printing and especially bed leveling
+
+Printer:
+- any model will do, as long as you have a basic understanding of printing and especially bed leveling
+
+Rafts:
+- if you have problems with printing bed adhesion, rafts could be an option, but I'd rather recommend doing proper bed leveling
+
+Resolution:
+- 0.1-0.15
+
+Infill:
+- depending on part, see below
+
+Filament brand:
+- choose your favorite
+
+Filament color:
+- preferably black
+
+Filament material:
+- PLA, ABS, PETG
+
+### Notes:
+We have to get the roll film back really light tight, so make sure to use some kind of really opaque filament.
+Make sure to print at least 4 walls and 8 bottom/top layers - we have to get some parts really light tight (base plate, film insert, cover, counter window blade)!
+
+- base plate bottom: 0.1mm layer, 100% infill, no support, 3mm brim
+- base plate top: 01.mm layer, 100% infill, no support, 3mm brim
+- film insert: 0.1mm layer, 66%infill, support, 3mm brim
+- cover: 0.1mm layer, 66% infill, support, 3mm brim
+- all smaller parts: 0.1mm layer, 100% infill, no support, 3mm brim
+
+### Post-Printing
+# base plate
+After removing the brim and cleaning up the edges of the base plate parts, glue the velvet ribbon into the indent.
+Then glue the "base plate top" to the "base plate bottom". Make sure that no glue gets into the dark slide slot, otherwise it'll get very difficult to pull in/out the dark slide.
+Glue the bottom wall into the slot at the bottom side 
+
+# film insert
+Remove brim and support structures, then clean up the edges with sandpaper or a little file.
+Press the two 6mm rods into their places at the bottom. They should be even with the bottom.
+Clean up the edges of your tin can stripes with a little file. Put the stripes into the slots in the inner walls. Bend the stripes down so they will put a little bit tension onto the film roll and prevent the film of unrolling.
+Counter window blade and film holder brackets:
+You may use a file to trim those parts a little bit so they slide into their respective guides. Be careful not to trim away too much - you should be able to move them in their guides with just a little force.
+
+# cover
+Remove brim and support structures from the cover.
+Check with a small, but very bright flashlight, if your cover (upper side, end faces) is really light tight. If not, paint the inside of the cover with black paint.
+If it is still not light tight, print the cover with black filament and 100% infill.
+
+# winders / winder knobs
+Once again, remove brim and sharp edges. On the smaller side of the winder plate use a file or sandpaper to make it a bit "wedgy". Then press it into the slot of the winder (the part with the cube on top of the cylinder. Put the winders into the film insert and press the winder knob onto it -  the bigger one on the right hand side, the smaller on the left (maybe you have to add a drop of glue).  
+
+# dark slide
+Make sure you have a perfectly flat sheet metal 170x70x0.5mm. Bend the last few millimeters to a grip (fold 5mm then bend the 5mm double to a right angle).
+Now the most important thing:
+As we don't have a light seal, we simply just don't pull out the dark slide completely. Instead we make marks onto the slide which show us, how far we can pull it out.
+Just put the dark slide into the dark slide slot of the back and pull it out until the window frame is completely open. Now mark the position on the darkslide (for example with small notches on the sides of the dark slide).
+
+### Testing & correcting film guidance
+You will have to sacrifice one or two rolls of film to get everything working.
+You may notice that the slot where the film is pulled through, is very tight.
+If it is too tight, then just apply strips of tape onto the base plate's guides.
